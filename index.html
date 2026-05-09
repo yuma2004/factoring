@@ -45,7 +45,10 @@
       <main>
         <section class="first-view" aria-labelledby="fv-title">
           <div class="hero-image-frame" aria-label="ファーストビュー画像">
-            <img src="assets/fv-hero-desktop.png" alt="">
+            <picture>
+              <source media="(max-width: 900px)" srcset="assets/fv-hero-mobile.png">
+              <img src="assets/fv-hero-desktop.png" alt="">
+            </picture>
           </div>
           <div class="hero-copy">
             <p class="ranking-lead">
@@ -61,7 +64,7 @@
             <p class="subtitle">法人・個人事業主向け おすすめランキング【2026年最新】</p>
             <a class="primary-cta" href="#ranking">
               <span class="free-badge">無料</span>
-              <span class="cta-label">ランキングを今すぐ見る</span>
+              <span class="cta-label">ランキングを見る</span>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
             </a>
           </div>
@@ -96,7 +99,7 @@
               <span class="kicker-copy">あなたの条件に合うファクタリング会社をピックアップ</span>
             </div>
 
-            <h2 id="filter-title">条件を選んでおすすめ会社を<span>絞り込む</span></h2>
+            <h2 id="filter-title">条件を選んで<br class="mobile-title-break">おすすめ会社を<span>絞り込む</span></h2>
             <p class="filter-lead">ご希望の条件を選択すると、最適なファクタリング会社を比較できます。</p>
 
             <form class="filter-card" aria-label="ファクタリング会社検索条件">
@@ -112,18 +115,18 @@
                 </legend>
                 <div class="option-grid option-grid-3">
                   <label class="filter-option is-selected">
-                    <input type="radio" name="type" checked>
+                    <input type="radio" name="type" value="corporate" checked>
                     <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 27V6h14v21M5 27h22M12 12h2M17 12h2M12 17h2M17 17h2M12 22h2M17 22h2"/></svg>
                     <span>法人</span>
                     <i aria-hidden="true">✓</i>
                   </label>
                   <label class="filter-option">
-                    <input type="radio" name="type">
+                    <input type="radio" name="type" value="personal">
                     <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="10" r="5"/><path d="M8 27v-3c0-5 16-5 16 0v3"/></svg>
                     <span>個人事業主</span>
                   </label>
                   <label class="filter-option">
-                    <input type="radio" name="type">
+                    <input type="radio" name="type" value="freelance">
                     <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 22h16M10 8h12v12H10zM6 25h20"/></svg>
                     <span>フリーランス</span>
                   </label>
@@ -142,20 +145,20 @@
                 </legend>
                 <div class="option-grid option-grid-4">
                   <label class="filter-option">
-                    <input type="radio" name="amount">
+                    <input type="radio" name="amount" value="small">
                     <span>〜50万</span>
                   </label>
                   <label class="filter-option is-selected">
-                    <input type="radio" name="amount" checked>
+                    <input type="radio" name="amount" value="mid" checked>
                     <span>50〜300万</span>
                     <i aria-hidden="true">✓</i>
                   </label>
                   <label class="filter-option">
-                    <input type="radio" name="amount">
+                    <input type="radio" name="amount" value="large">
                     <span>300〜1000万</span>
                   </label>
                   <label class="filter-option">
-                    <input type="radio" name="amount">
+                    <input type="radio" name="amount" value="enterprise">
                     <span>1000万〜</span>
                   </label>
                 </div>
@@ -173,16 +176,16 @@
                 </legend>
                 <div class="option-grid option-grid-3">
                   <label class="filter-option is-selected">
-                    <input type="radio" name="speed" checked>
+                    <input type="radio" name="speed" value="same-day" checked>
                     <span>即日</span>
                     <i aria-hidden="true">✓</i>
                   </label>
                   <label class="filter-option">
-                    <input type="radio" name="speed">
+                    <input type="radio" name="speed" value="next-day">
                     <span>翌日</span>
                   </label>
                   <label class="filter-option">
-                    <input type="radio" name="speed">
+                    <input type="radio" name="speed" value="two-three-days">
                     <span>2〜3日</span>
                   </label>
                 </div>
@@ -695,6 +698,45 @@
         </section>
       </main>
       <footer class="simple-footer">
+        <div class="mobile-footer-compare">
+          <div class="mobile-footer-compare-card">
+            <svg class="mobile-footer-scale" viewBox="0 0 72 72" aria-hidden="true">
+              <circle cx="36" cy="36" r="30"></circle>
+              <path d="M36 17v36M22 25h28M25 25l-8 17h16zM47 25l-8 17h16zM26 50h20"></path>
+            </svg>
+            <div class="mobile-footer-compare-copy">
+              <h2>あなたに合うファクタリング会社を今すぐ比較</h2>
+              <p>手数料・入金スピード・買取上限額などをまとめて比較。最適な1社が見つかります。</p>
+            </div>
+            <a class="mobile-footer-ranking" href="#ranking">ランキングを見る <span>›</span></a>
+          </div>
+        </div>
+
+        <div class="mobile-footer-details">
+          <div class="mobile-footer-brand">
+            <svg viewBox="0 0 72 72" aria-hidden="true">
+              <path d="M16 6h28l12 12v48H16z"></path>
+              <path d="M44 6v14h12M24 26h20M24 36h20M24 46h12"></path>
+              <circle cx="50" cy="52" r="13"></circle>
+              <path d="M44 46h12M50 46v13M44 53h12"></path>
+            </svg>
+            <strong>請求書ファクタリング<span>比較ナビ</span></strong>
+          </div>
+          <p class="mobile-footer-description">請求書ファクタリング会社を手数料・入金スピード・買取上限額などで徹底比較し、事業者の資金繰りをサポートする比較情報サイトです。</p>
+          <p class="mobile-footer-ssl">SSL暗号化通信対応</p>
+
+          <div class="mobile-footer-group">
+            <h3>サイトメニュー</h3>
+            <a href="#ranking">ランキング</a>
+            <a href="#comparison">比較表</a>
+            <a href="#columns">コラム</a>
+            <a href="#faq">FAQ</a>
+          </div>
+
+          <a class="mobile-footer-top" href="#top">⌃<span>ページの先頭へ</span></a>
+          <p class="mobile-footer-copy">© 2025 請求書ファクタリング比較ナビ All Rights Reserved.</p>
+        </div>
+
         <div class="simple-footer-inner">
           <a class="simple-footer-brand" href="#top" aria-label="ページの先頭へ">
             <svg viewBox="0 0 72 72" aria-hidden="true">
@@ -711,20 +753,170 @@
             <a href="#comparison">比較表</a>
             <a href="#columns">コラム</a>
             <a href="#faq">FAQ</a>
-            <a href="#">運営者情報</a>
-            <a href="#">プライバシーポリシー</a>
           </nav>
         </div>
-        <p class="simple-footer-note">掲載情報は調査時点のものです。最新情報は各社公式サイトをご確認ください。</p>
         <p class="simple-footer-copy">© 2025 請求書ファクタリング比較ナビ All Rights Reserved.</p>
       </footer>
     </div>
     <script>
       (() => {
         const form = document.querySelector(".filter-card");
+        const compareButton = document.querySelector(".compare-button");
         const resetButton = document.querySelector(".reset-button");
+        const comparisonTable = document.querySelector(".comparison-table");
+        const comparisonWrap = document.querySelector(".comparison-table-wrap");
+        const rankingTitle = document.querySelector("#ranking-detail-title");
+        const rankingLead = document.querySelector(".ranking-detail-lead");
+        const initialRankingTitle = rankingTitle?.textContent || "";
+        const initialRankingLead = rankingLead?.innerHTML || "";
 
         if (!form) return;
+
+        const companyProfiles = {
+          "ペイトナー": {
+            types: ["personal", "freelance"],
+            amounts: ["small", "mid"],
+            speed: "same-day"
+          },
+          "ラボル": {
+            types: ["personal", "freelance"],
+            amounts: ["small", "mid", "large", "enterprise"],
+            speed: "same-day"
+          },
+          "QuQuMo": {
+            types: ["corporate", "personal", "freelance"],
+            amounts: ["small", "mid", "large", "enterprise"],
+            speed: "same-day"
+          },
+          "メンターキャピタル": {
+            types: ["corporate"],
+            amounts: ["small", "mid", "large", "enterprise"],
+            speed: "same-day"
+          },
+          "アクセルファクター": {
+            types: ["corporate"],
+            amounts: ["small", "mid", "large", "enterprise"],
+            speed: "same-day"
+          },
+          "AGビジネスサポート": {
+            types: ["corporate"],
+            amounts: ["small", "mid", "large", "enterprise"],
+            speed: "same-day"
+          },
+          "ビートレーディング": {
+            types: ["corporate"],
+            amounts: ["small", "mid", "large", "enterprise"],
+            speed: "same-day"
+          }
+        };
+
+        const speedRank = {
+          "same-day": 0,
+          "next-day": 1,
+          "two-three-days": 2
+        };
+        const rankingProfiles = {
+          "ペイトナー": companyProfiles["ペイトナー"],
+          "ラボル": companyProfiles["ラボル"],
+          "QuQuMo": {
+            types: ["personal", "freelance"],
+            amounts: ["small", "mid", "large", "enterprise"],
+            speed: "same-day"
+          }
+        };
+
+        const filterLabels = {
+          type: {
+            corporate: "法人",
+            personal: "個人事業主",
+            freelance: "フリーランス"
+          },
+          amount: {
+            small: "〜50万",
+            mid: "50〜300万",
+            large: "300〜1000万",
+            enterprise: "1000万〜"
+          },
+          speed: {
+            "same-day": "即日",
+            "next-day": "翌日まで",
+            "two-three-days": "2〜3日まで"
+          }
+        };
+
+        const comparisonRows = comparisonTable
+          ? [...comparisonTable.querySelectorAll("tbody tr")]
+          : [];
+        const rankingCards = [...document.querySelectorAll(".ranking-card")];
+        const tableGroups = comparisonTable
+          ? [...comparisonTable.querySelectorAll("th.audience")].map((header) => {
+              const firstRow = header.closest("tr");
+              const rowCount = Number(header.getAttribute("rowspan") || 1);
+              const rows = [firstRow];
+              let row = firstRow;
+
+              for (let i = 1; i < rowCount; i += 1) {
+                row = row?.nextElementSibling;
+                if (row) rows.push(row);
+              }
+
+              return { header, firstRow, rows };
+            })
+          : [];
+
+        const getCompanyName = (element) => {
+          const name = element.querySelector(".company-cell strong, .ranking-left h3")?.textContent
+            .replace(/\s+/g, "")
+            .trim() || "";
+
+          return Object.keys(companyProfiles).find((company) => name.startsWith(company));
+        };
+
+        const getCriteria = () => ({
+          type: form.querySelector('input[name="type"]:checked')?.value,
+          amount: form.querySelector('input[name="amount"]:checked')?.value,
+          speed: form.querySelector('input[name="speed"]:checked')?.value
+        });
+
+        const isMatch = (profile, criteria) => {
+          if (!profile || !criteria.type || !criteria.amount || !criteria.speed) return false;
+
+          return (
+            profile.types.includes(criteria.type) &&
+            profile.amounts.includes(criteria.amount) &&
+            speedRank[profile.speed] <= speedRank[criteria.speed]
+          );
+        };
+
+        const getOrCreateStatus = (className, parent, textClass, tagName = "p") => {
+          let status = document.querySelector(`.${className}`);
+
+          if (!status && parent) {
+            status = document.createElement(tagName);
+            status.className = textClass || className;
+            status.setAttribute("aria-live", "polite");
+            parent.insertAdjacentElement("afterend", status);
+          }
+
+          return status;
+        };
+
+        const filterStatus = getOrCreateStatus(
+          "filter-result-status",
+          document.querySelector(".filter-actions"),
+          "filter-result-status is-filter-hidden",
+          "div"
+        );
+        const comparisonEmpty = getOrCreateStatus(
+          "comparison-empty",
+          comparisonWrap,
+          "comparison-empty is-filter-hidden"
+        );
+        const rankingEmpty = getOrCreateStatus(
+          "ranking-empty",
+          document.querySelector(".ranking-card:last-of-type"),
+          "ranking-empty is-filter-hidden"
+        );
 
         const syncRadioGroup = (name) => {
           const radios = [...form.querySelectorAll(`input[type="radio"][name="${name}"]`)];
@@ -748,6 +940,122 @@
           });
         };
 
+        const updateAudienceHeaders = () => {
+          tableGroups.forEach(({ header, firstRow, rows }) => {
+            const visibleRows = rows.filter((row) => !row.classList.contains("is-filter-hidden"));
+            const targetRow = visibleRows[0] || firstRow;
+
+            if (header.parentElement !== targetRow) {
+              targetRow.insertBefore(header, targetRow.firstElementChild);
+            }
+
+            header.rowSpan = visibleRows.length || rows.length;
+            header.classList.toggle("is-filter-hidden", visibleRows.length === 0);
+          });
+        };
+
+        const updateRankingCopy = (criteria) => {
+          if (!rankingTitle || !rankingLead) return;
+
+          const label = filterLabels.type[criteria.type] || "条件";
+          rankingTitle.textContent = `${label}向けファクタリング おすすめ会社`;
+          rankingLead.textContent = `${filterLabels.amount[criteria.amount]}・${filterLabels.speed[criteria.speed]}の条件に合うサービスを表示しています。`;
+        };
+
+        const updateFilterStatus = (criteria, count) => {
+          if (!filterStatus) return;
+
+          filterStatus.replaceChildren();
+
+          const badge = document.createElement("strong");
+          badge.className = "filter-result-badge";
+          badge.textContent = "絞り込み中";
+
+          const copy = document.createElement("span");
+          copy.className = "filter-result-copy";
+          copy.textContent = `${count}社が該当しました`;
+
+          const chips = document.createElement("span");
+          chips.className = "filter-result-chips";
+
+          [
+            filterLabels.type[criteria.type],
+            filterLabels.amount[criteria.amount],
+            filterLabels.speed[criteria.speed]
+          ].forEach((label) => {
+            const chip = document.createElement("span");
+            chip.textContent = label;
+            chips.appendChild(chip);
+          });
+
+          filterStatus.append(badge, copy, chips);
+          filterStatus.classList.remove("is-filter-hidden");
+        };
+
+        const showAllResults = () => {
+          comparisonRows.forEach((row) => {
+            row.classList.remove("is-filter-hidden", "is-filter-match");
+          });
+
+          rankingCards.forEach((card) => {
+            card.classList.remove("is-filter-hidden", "is-filter-match");
+          });
+
+          tableGroups.forEach(({ header, firstRow, rows }) => {
+            if (header.parentElement !== firstRow) {
+              firstRow.insertBefore(header, firstRow.firstElementChild);
+            }
+
+            header.rowSpan = rows.length;
+            header.classList.remove("is-filter-hidden");
+          });
+
+          filterStatus?.classList.add("is-filter-hidden");
+          comparisonEmpty?.classList.add("is-filter-hidden");
+          rankingEmpty?.classList.add("is-filter-hidden");
+
+          if (rankingTitle) rankingTitle.textContent = initialRankingTitle;
+          if (rankingLead) rankingLead.innerHTML = initialRankingLead;
+        };
+
+        const applyFilters = () => {
+          const criteria = getCriteria();
+          let comparisonCount = 0;
+          let rankingCount = 0;
+
+          comparisonRows.forEach((row) => {
+            const companyName = getCompanyName(row);
+            const matched = isMatch(companyProfiles[companyName], criteria);
+
+            row.classList.toggle("is-filter-hidden", !matched);
+            row.classList.toggle("is-filter-match", matched);
+            if (matched) comparisonCount += 1;
+          });
+
+          rankingCards.forEach((card) => {
+            const companyName = getCompanyName(card);
+            const matched = isMatch(rankingProfiles[companyName], criteria);
+
+            card.classList.toggle("is-filter-hidden", !matched);
+            card.classList.toggle("is-filter-match", matched);
+            if (matched) rankingCount += 1;
+          });
+
+          updateAudienceHeaders();
+          updateRankingCopy(criteria);
+          updateFilterStatus(criteria, comparisonCount);
+
+          comparisonEmpty?.classList.toggle("is-filter-hidden", comparisonCount !== 0);
+          if (comparisonEmpty) {
+            comparisonEmpty.textContent = "条件に合う会社が見つかりませんでした。条件を変更して再検索してください。";
+          }
+
+          rankingEmpty?.classList.toggle("is-filter-hidden", rankingCount !== 0);
+          if (rankingEmpty) {
+            rankingEmpty.textContent = "この条件で表示できるランキング詳細はありません。比較表をご確認ください。";
+          }
+        };
+
         const syncAll = () => {
           const names = new Set(
             [...form.querySelectorAll('input[type="radio"]')].map((radio) => radio.name)
@@ -759,15 +1067,23 @@
         form.addEventListener("change", (event) => {
           if (event.target.matches('input[type="radio"]')) {
             syncRadioGroup(event.target.name);
+            applyFilters();
           }
+        });
+
+        compareButton?.addEventListener("click", () => {
+          applyFilters();
+          document.querySelector("#comparison")?.scrollIntoView({ behavior: "smooth" });
         });
 
         resetButton?.addEventListener("click", () => {
           form.reset();
           syncAll();
+          showAllResults();
         });
 
         syncAll();
+        showAllResults();
       })();
     </script>
   </body>
