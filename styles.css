@@ -9298,7 +9298,31 @@ a {
 }
 
 .filter-card-steps + .filter-actions {
+  gap: 14px;
   padding: 24px 0 8px;
+}
+
+.filter-card-steps + .filter-actions .compare-button {
+  width: min(320px, 100%);
+  height: 54px;
+  gap: 0;
+  border-radius: 0;
+  color: #fff;
+  background: var(--navy);
+  box-shadow: none;
+  font-size: clamp(21px, 2.4vw, 26px);
+  font-weight: 900;
+  letter-spacing: .04em;
+}
+
+.filter-card-steps + .filter-actions .compare-button:hover,
+.filter-card-steps + .filter-actions .compare-button:focus-visible {
+  background: #061d41;
+}
+
+.filter-card-steps + .filter-actions .reset-button {
+  font-size: 15px;
+  letter-spacing: .02em;
 }
 
 @media (max-width: 560px) {
@@ -9337,5 +9361,11 @@ a {
     overflow-wrap: anywhere;
     word-break: normal;
     line-break: auto;
+  }
+
+  .filter-card-steps + .filter-actions .compare-button {
+    width: min(320px, 100%);
+    height: 48px;
+    font-size: 20px;
   }
 }
