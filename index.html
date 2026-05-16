@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>請求書ファクタリング比較ナビ</title>
-    <link rel="stylesheet" href="styles.css?v=20260516-filter-cta">
+    <link rel="stylesheet" href="styles.css?v=20260516-search-items">
   </head>
   <body>
     <div class="lp-shell">
@@ -90,27 +90,33 @@
           <p class="data-note">※ランキング・比較情報は2026年5月時点の調査結果に基づいています。</p>
         </section>
 
-        <section class="audience-switch-section" aria-label="利用者タイプ切り替え">
-          <div class="audience-switch" role="tablist" aria-label="法人と個人事業主の切り替え">
-            <button class="audience-tab" type="button" role="tab" aria-selected="false" aria-controls="search" data-audience-tab="corporate">
-              法人
-            </button>
-            <button class="audience-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="search" data-audience-tab="personal">
-              個人事業主
-            </button>
-          </div>
-        </section>
-
         <section class="filter-section" id="search" aria-labelledby="filter-title">
           <div class="filter-inner">
             <h2 id="filter-title" class="visually-hidden">絞り込み検索</h2>
             <p class="filter-instruction">ご利用条件を選択してください</p>
 
             <form class="filter-card filter-card-steps" aria-label="ファクタリング会社検索条件">
-              <input type="radio" name="type" value="corporate" hidden>
-              <input type="radio" name="type" value="personal" checked hidden>
               <fieldset class="filter-step">
-                <legend>1. 調達額を選ぶ</legend>
+                <legend>1. 利用者タイプを選ぶ</legend>
+                <div class="option-grid option-grid-3">
+                  <label class="filter-option">
+                    <input type="radio" name="type" value="corporate">
+                    <span>法人</span>
+                  </label>
+                  <label class="filter-option is-selected">
+                    <input type="radio" name="type" value="personal" checked>
+                    <span>個人事業主</span>
+                    <i aria-hidden="true">✓</i>
+                  </label>
+                  <label class="filter-option">
+                    <input type="radio" name="type" value="freelance">
+                    <span>フリーランス</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset class="filter-step">
+                <legend>2. 調達額を選ぶ</legend>
                 <div class="option-grid option-grid-2">
                   <label class="filter-option">
                     <input type="radio" name="amount" value="small">
@@ -133,7 +139,7 @@
               </fieldset>
 
               <fieldset class="filter-step">
-                <legend>2. 入金スピードを選ぶ</legend>
+                <legend>3. 入金スピードを選ぶ</legend>
                 <div class="option-grid option-grid-3">
                   <label class="filter-option is-selected">
                     <input type="radio" name="speed" value="same-day" checked>
@@ -162,6 +168,17 @@
               </button>
             </div>
 
+          </div>
+        </section>
+
+        <section class="audience-switch-section" aria-label="利用者タイプ切り替え">
+          <div class="audience-switch" role="tablist" aria-label="法人と個人事業主の切り替え">
+            <button class="audience-tab" type="button" role="tab" aria-selected="false" aria-controls="search" data-audience-tab="corporate">
+              法人
+            </button>
+            <button class="audience-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="search" data-audience-tab="personal">
+              個人事業主
+            </button>
           </div>
         </section>
 
@@ -305,6 +322,12 @@
                       <td><span class="score-mark best">◎</span><strong>即日</strong></td>
                       <td><span class="score-mark best">◎</span><strong>即日</strong></td>
                       <td><span class="score-mark">○</span><strong>当日</strong></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">口コミ<br>評価</th>
+                      <td><span class="score-mark best">◎</span><strong>豊富な実績</strong></td>
+                      <td><span class="score-mark best">◎</span><strong>良い</strong></td>
+                      <td><span class="score-mark">○</span><strong>普通</strong></td>
                     </tr>
                     <tr>
                       <th scope="row">公式サイト</th>
