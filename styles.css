@@ -9437,6 +9437,41 @@ a {
 }
 
 @media (max-width: 430px) {
+  .comparison-table tbody tr:nth-child(-n+3) {
+    padding-top: 102px;
+  }
+
+  .comparison-table tbody tr:nth-child(-n+3) .company-cell {
+    top: 18px;
+    left: 70px;
+    right: 78px;
+    height: 44px;
+  }
+
+  .comparison-table tbody tr:nth-child(-n+3) .company-cell .brand-logo {
+    width: min(150px, 100%);
+    min-width: 0;
+    min-height: 42px;
+  }
+
+  .comparison-table tbody tr:nth-child(-n+3) .company-cell .brand-logo::before {
+    height: 42px;
+  }
+
+  .comparison-table tbody tr:nth-child(-n+3) .rating-cell {
+    top: 66px;
+    right: auto;
+    left: 70px;
+  }
+
+  .comparison-table tbody tr:nth-child(-n+3)::before {
+    top: 20px;
+  }
+
+  .comparison-table tbody tr:nth-child(-n+3)::after {
+    top: 64px;
+  }
+
   .comparison-table tbody tr:nth-child(-n+3) .site-actions {
     grid-template-columns: minmax(86px, .72fr) minmax(0, 1.62fr);
     gap: 8px;
