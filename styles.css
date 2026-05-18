@@ -8755,12 +8755,23 @@ a {
 
 .brand-logo {
   position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
   min-width: min(100%, 150px);
   min-height: 48px;
 }
 
 .brand-logo span {
-  display: none !important;
+  display: inline-block !important;
+  color: var(--navy);
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .brand-logo::before {
