@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>請求書ファクタリング比較ナビ</title>
-    <link rel="stylesheet" href="styles.css?v=20260518-detail-links">
+    <link rel="stylesheet" href="styles.css?v=20260518-mobile-menu">
   </head>
   <body>
     <div class="lp-shell">
@@ -22,7 +22,12 @@
             <span>請求書ファクタリング</span><span>比較ナビ</span>
           </span>
         </a>
-        <nav class="global-nav" aria-label="主要ナビゲーション">
+        <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="global-nav" id="global-nav" aria-label="主要ナビゲーション">
           <a class="nav-item is-active" href="#ranking">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v3a4 4 0 0 1-8 0V4Z"/><path d="M6 5H3v2a5 5 0 0 0 5 5M18 5h3v2a5 5 0 0 1-5 5M12 11v5M8 20h8M10 16h4"/></svg>
             <span>ランキング</span>
@@ -31,7 +36,7 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M8 4v16M4 10h16M4 15h16"/></svg>
             <span>比較表</span>
           </a>
-          <a class="nav-item" href="#column">
+          <a class="nav-item" href="#columns">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v5h4M10 12h5M10 16h5"/></svg>
             <span>コラム</span>
           </a>
@@ -894,6 +899,46 @@
       </footer>
     </div>
     <script>
+      (() => {
+        const toggle = document.querySelector(".menu-toggle");
+        const nav = document.querySelector("#global-nav");
+        if (!toggle || !nav) return;
+
+        const closeMenu = () => {
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.setAttribute("aria-label", "メニューを開く");
+          nav.classList.remove("is-open");
+        };
+
+        const openMenu = () => {
+          toggle.setAttribute("aria-expanded", "true");
+          toggle.setAttribute("aria-label", "メニューを閉じる");
+          nav.classList.add("is-open");
+        };
+
+        toggle.addEventListener("click", () => {
+          if (toggle.getAttribute("aria-expanded") === "true") {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+
+        nav.addEventListener("click", (event) => {
+          if (event.target.closest("a")) closeMenu();
+        });
+
+        document.addEventListener("click", (event) => {
+          if (!nav.classList.contains("is-open")) return;
+          if (event.target.closest(".menu-toggle") || event.target.closest("#global-nav")) return;
+          closeMenu();
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") closeMenu();
+        });
+      })();
+
       (() => {
         const form = document.querySelector(".filter-card");
         const compareButton = document.querySelector(".compare-button");
