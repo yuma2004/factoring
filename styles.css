@@ -8970,6 +8970,8 @@ a {
 }
 
 .ranking-actions .detail-more-button {
+  min-height: 60px;
+  height: 60px;
   justify-self: center;
 }
 
