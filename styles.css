@@ -9737,6 +9737,25 @@ a {
     height: 48px;
     font-size: 20px;
   }
+
+  .point-list {
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .point-list li {
+    min-height: 24px;
+    padding-left: 32px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .point-list li::before {
+    top: 1px;
+    width: 22px;
+    height: 22px;
+    font-size: 13px;
+  }
 }
 
 @media (min-width: 901px) {
