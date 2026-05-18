@@ -8689,6 +8689,16 @@ a {
   text-decoration: none;
 }
 
+.comparison-table .company-cell {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.comparison-table .company-cell .brand-logo {
+  margin: 0 auto;
+}
+
 .site-actions {
   display: grid;
   gap: 10px;
