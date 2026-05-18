@@ -9501,7 +9501,7 @@ a {
 
 .filter-card.filter-card-steps {
   display: grid;
-  gap: 20px;
+  gap: 12px;
   margin: 0;
   padding: 0;
   border: 0;
@@ -9513,7 +9513,7 @@ a {
 .filter-step {
   display: block;
   margin: 0;
-  padding: clamp(24px, 3vw, 34px) clamp(16px, 3.2vw, 28px) clamp(18px, 2.8vw, 28px);
+  padding: clamp(14px, 2vw, 22px) clamp(16px, 3.2vw, 28px) clamp(14px, 2vw, 20px);
   border: 1px solid #dfe6ef;
   border-radius: 8px;
   background: rgba(255, 255, 255, .96);
@@ -9521,10 +9521,10 @@ a {
 }
 
 .filter-step legend {
-  display: block;
+  display: table;
   float: none;
-  width: 100%;
-  margin: 0 0 24px;
+  width: auto;
+  margin: 0 auto 10px;
   padding: 0 0 2px;
   color: var(--green);
   font-size: clamp(16px, 1.95vw, 20px);
@@ -9536,7 +9536,7 @@ a {
 
 .filter-subgroup {
   display: grid;
-  gap: 16px;
+  gap: 10px;
 }
 
 .filter-subtitle {
@@ -9549,7 +9549,7 @@ a {
 }
 
 .filter-step-divider {
-  margin: 28px 0 22px;
+  margin: 16px 0 14px;
   border-top: 1px dashed rgba(7, 31, 70, .32);
 }
 
@@ -9559,7 +9559,7 @@ a {
 .filter-card-steps .option-grid-4 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(10px, 1.6vw, 14px);
+  gap: clamp(8px, 1.2vw, 12px);
   width: 100%;
   min-width: 0;
 }
@@ -9658,15 +9658,15 @@ a {
   }
 
   .filter-card.filter-card-steps {
-    gap: 18px;
+    gap: 10px;
   }
 
   .filter-step {
-    padding: 22px 15px 18px;
+    padding: 10px 15px 12px;
   }
 
   .filter-step legend {
-    margin-bottom: 18px;
+    margin-bottom: 6px;
     font-size: 15px;
   }
 
@@ -9675,11 +9675,11 @@ a {
   }
 
   .filter-step-divider {
-    margin: 24px 0 18px;
+    margin: 12px 0 10px;
   }
 
   .filter-card-steps .filter-option {
-    min-height: 40px;
+    min-height: 38px;
     padding: 8px 6px;
     font-size: 10px;
   }
