@@ -8982,6 +8982,7 @@ a {
 .ranking-card {
   position: relative;
   padding: 30px 30px 28px;
+  scroll-margin-top: 24px;
 }
 
 .rank-ribbon {
