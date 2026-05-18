@@ -3771,6 +3771,10 @@ a {
   gap: 18px;
 }
 
+.reason-comment-grid .editor-comment:only-child {
+  grid-column: 1 / -1;
+}
+
 .editor-comment {
   padding: 16px 18px;
   border: 1px solid #ead8ba;
@@ -3791,6 +3795,10 @@ a {
   font-size: 15px;
   font-weight: 700;
   line-height: 1.65;
+}
+
+.editor-comment p + p {
+  margin-top: 10px;
 }
 
 .review-block {
