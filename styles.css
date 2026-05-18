@@ -9784,21 +9784,21 @@ a {
 
   .menu-toggle {
     position: absolute;
-    right: 16px;
-    bottom: 20px;
+    right: 14px;
+    bottom: 18px;
     z-index: 1002;
     display: inline-flex;
-    width: 46px;
-    height: 46px;
+    width: 44px;
+    height: 44px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 6px;
     border: 2px solid var(--navy);
-    border-radius: 8px;
+    border-radius: 10px;
     color: var(--navy);
     background: rgba(255, 255, 255, .96);
-    box-shadow: 0 8px 20px rgba(7, 31, 70, .12);
+    box-shadow: 0 6px 16px rgba(7, 31, 70, .12);
   }
 
   .menu-toggle span {
@@ -9823,19 +9823,20 @@ a {
   }
 
   .global-nav {
-    top: calc(100% + 8px);
-    right: 16px;
+    top: calc(100% + 7px);
+    right: 14px;
     bottom: auto;
     z-index: 1001;
     display: grid;
-    width: min(280px, calc(100vw - 32px));
+    width: min(292px, calc(100vw - 28px));
     height: auto;
-    padding: 12px;
+    padding: 10px;
     gap: 8px;
-    border: 1px solid rgba(7, 31, 70, .18);
-    border-radius: 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border: 1px solid rgba(7, 31, 70, .16);
+    border-radius: 12px;
     background: #fff;
-    box-shadow: 0 16px 36px rgba(7, 31, 70, .18);
+    box-shadow: 0 18px 38px rgba(7, 31, 70, .2);
     opacity: 0;
     pointer-events: none;
     transform: translateY(-8px);
@@ -9849,10 +9850,24 @@ a {
   .global-nav .nav-item {
     display: flex;
     width: 100%;
-    height: 46px;
-    justify-content: flex-start;
-    padding: 0 14px;
-    border-radius: 7px;
+    height: 44px;
+    justify-content: center;
+    padding: 0 12px;
+    gap: 7px;
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .global-nav .nav-item span {
+    white-space: nowrap;
+  }
+
+  .global-nav .nav-item svg {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
   }
 
   .global-nav.is-open {
