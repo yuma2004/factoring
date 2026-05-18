@@ -9011,6 +9011,11 @@ a {
   line-height: 1.15;
 }
 
+.ranking-card .ranking-left h3::before {
+  content: none !important;
+  display: none !important;
+}
+
 .ranking-card .service-rating {
   justify-self: end;
   margin: 0;
