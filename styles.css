@@ -9077,6 +9077,49 @@ a {
   width: min(186px, 100%);
 }
 
+.brand-mentor::before {
+  background-image: url("assets/logo-mentor-capital.png");
+}
+
+.brand-accel::before {
+  background-image: url("assets/logo-accel-factor.svg");
+}
+
+.brand-ag::before {
+  border-radius: 6px;
+  background-color: #005bac;
+  background-image: url("assets/logo-ag-business.svg");
+  background-size: 88% auto;
+}
+
+.brand-mentor,
+.brand-accel,
+.brand-ag {
+  width: min(190px, 100%);
+}
+
+.top3-logo-thumb {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 82px;
+  background: #fff;
+}
+
+.top3-logo-thumb.is-dark {
+  background: #005bac;
+}
+
+.top3-logo-thumb img {
+  width: 100%;
+  max-height: 58px;
+  object-fit: contain;
+}
+
+.top3-logo-thumb.is-dark img {
+  background: transparent;
+}
+
 .top3-table .medal {
   width: 58px;
   height: 78px;
