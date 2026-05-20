@@ -341,12 +341,12 @@
                       <th scope="col">
                         <span class="medal gold">1</span>
                         <span class="top3-thumb"><img src="assets/v3-product-paytner.png" alt=""></span>
-                        <strong class="brand-logo brand-paytner"><span>Paytner</span></strong>
+                        <strong class="brand-logo brand-paytner"><span>ペイトナー</span></strong>
                       </th>
                       <th scope="col">
                         <span class="medal silver">2</span>
                         <span class="top3-thumb"><img src="assets/v3-product-labol.png" alt=""></span>
-                        <strong class="brand-logo brand-labol"><span>labol</span></strong>
+                        <strong class="brand-logo brand-labol"><span>ラボル</span></strong>
                       </th>
                       <th scope="col">
                         <span class="medal bronze">3</span>
@@ -1250,8 +1250,10 @@
         const comparisonWrap = document.querySelector(".comparison-table-wrap");
         const rankingTitle = document.querySelector("#ranking-detail-title");
         const rankingLead = document.querySelector(".ranking-detail-lead");
+        const rankingAudienceLabel = document.querySelector(".ranking-detail-section .section-label.compact strong");
         const initialRankingTitle = rankingTitle?.innerHTML || "";
         const initialRankingLead = rankingLead?.innerHTML || "";
+        const initialRankingAudienceLabel = rankingAudienceLabel?.textContent || "";
         const audienceTabs = [...document.querySelectorAll("[data-audience-tab]")];
         const audiencePanels = [...document.querySelectorAll("[data-audience-panel]")];
 
@@ -1461,6 +1463,10 @@
 
         const updateRankingCopy = (criteria) => {
           if (!rankingTitle || !rankingLead) return;
+          if (rankingAudienceLabel) {
+            const audienceLabel = filterLabels.type[criteria.type] || "";
+            rankingAudienceLabel.textContent = audienceLabel ? `${audienceLabel}向け` : initialRankingAudienceLabel;
+          }
 
           const label = filterLabels.type[criteria.type] || "条件";
           rankingTitle.textContent = `${label}向けファクタリング おすすめ会社`;
@@ -1522,6 +1528,7 @@
 
           if (rankingTitle) rankingTitle.innerHTML = initialRankingTitle;
           if (rankingLead) rankingLead.innerHTML = initialRankingLead;
+          if (rankingAudienceLabel) rankingAudienceLabel.textContent = initialRankingAudienceLabel;
         };
 
         const applyFilters = () => {
