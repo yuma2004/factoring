@@ -9078,18 +9078,18 @@ a {
 }
 
 .brand-mentor::before {
-  background-image: url("assets/logo-mentor-capital.png");
+  background-image: url("assets/corporate-logo-mentor.png");
 }
 
 .brand-accel::before {
-  background-image: url("assets/logo-accel-factor.svg");
+  background-image: url("assets/corporate-logo-accel.png");
 }
 
 .brand-ag::before {
   border-radius: 6px;
-  background-color: #005bac;
-  background-image: url("assets/logo-ag-business.svg");
-  background-size: 88% auto;
+  background-color: #fff;
+  background-image: url("assets/corporate-logo-ag.png");
+  background-size: contain;
 }
 
 .brand-mentor,
