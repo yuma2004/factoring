@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>請求書ファクタリング比較ナビ</title>
-    <link rel="stylesheet" href="styles.css?v=20260519-corporate-content">
+    <link rel="stylesheet" href="styles.css?v=20260521-review-v4">
   </head>
-  <body>
+  <body id="top">
     <div class="lp-shell">
       <header class="site-header" aria-label="サイトヘッダー">
         <div class="header-copy">ファクタリング会社を徹底比較！手数料・入金スピード・審査通過率で選ぶなら</div>
@@ -100,77 +100,79 @@
             <h2 id="filter-title" class="visually-hidden">絞り込み検索</h2>
             <p class="filter-instruction">ご利用条件を選択してください</p>
 
-            <form class="filter-card filter-card-steps" aria-label="ファクタリング会社検索条件">
-              <fieldset class="filter-step">
-                <legend>1. 利用者タイプを選ぶ</legend>
-                <div class="option-grid option-grid-3">
-                  <label class="filter-option">
-                    <input type="radio" name="type" value="corporate">
-                    <span>法人</span>
-                  </label>
-                  <label class="filter-option is-selected">
-                    <input type="radio" name="type" value="personal" checked>
-                    <span>個人事業主</span>
-                    <i aria-hidden="true">✓</i>
-                  </label>
-                  <label class="filter-option">
-                    <input type="radio" name="type" value="freelance">
-                    <span>フリーランス</span>
-                  </label>
-                </div>
-              </fieldset>
+            <div class="filter-panel">
+              <form class="filter-card filter-card-steps" aria-label="ファクタリング会社検索条件">
+                <fieldset class="filter-step">
+                  <legend>1. 利用者タイプを選ぶ</legend>
+                  <div class="option-grid option-grid-3">
+                    <label class="filter-option">
+                      <input type="radio" name="type" value="corporate">
+                      <span>法人</span>
+                    </label>
+                    <label class="filter-option is-selected">
+                      <input type="radio" name="type" value="personal" checked>
+                      <span>個人事業主</span>
+                      <i aria-hidden="true">✓</i>
+                    </label>
+                    <label class="filter-option">
+                      <input type="radio" name="type" value="freelance">
+                      <span>フリーランス</span>
+                    </label>
+                  </div>
+                </fieldset>
 
-              <fieldset class="filter-step">
-                <legend>2. 調達額を選ぶ</legend>
-                <div class="option-grid option-grid-2">
-                  <label class="filter-option">
-                    <input type="radio" name="amount" value="small">
-                    <span>〜50万</span>
-                  </label>
-                  <label class="filter-option is-selected">
-                    <input type="radio" name="amount" value="mid" checked>
-                    <span>50〜300万</span>
-                    <i aria-hidden="true">✓</i>
-                  </label>
-                  <label class="filter-option">
-                    <input type="radio" name="amount" value="large">
-                    <span>300〜1000万</span>
-                  </label>
-                  <label class="filter-option">
-                    <input type="radio" name="amount" value="enterprise">
-                    <span>1000万〜</span>
-                  </label>
-                </div>
-              </fieldset>
+                <fieldset class="filter-step">
+                  <legend>2. 調達額を選ぶ</legend>
+                  <div class="option-grid option-grid-2">
+                    <label class="filter-option">
+                      <input type="radio" name="amount" value="small">
+                      <span>〜50万</span>
+                    </label>
+                    <label class="filter-option is-selected">
+                      <input type="radio" name="amount" value="mid" checked>
+                      <span>50〜300万</span>
+                      <i aria-hidden="true">✓</i>
+                    </label>
+                    <label class="filter-option">
+                      <input type="radio" name="amount" value="large">
+                      <span>300〜1000万</span>
+                    </label>
+                    <label class="filter-option">
+                      <input type="radio" name="amount" value="enterprise">
+                      <span>1000万〜</span>
+                    </label>
+                  </div>
+                </fieldset>
 
-              <fieldset class="filter-step">
-                <legend>3. 入金スピードを選ぶ</legend>
-                <div class="option-grid option-grid-3">
-                  <label class="filter-option is-selected">
-                    <input type="radio" name="speed" value="same-day" checked>
-                    <span>即日</span>
-                    <i aria-hidden="true">✓</i>
-                  </label>
-                  <label class="filter-option">
-                    <input type="radio" name="speed" value="next-day">
-                    <span>翌日</span>
-                  </label>
-                  <label class="filter-option">
-                    <input type="radio" name="speed" value="two-three-days">
-                    <span>2〜3日</span>
-                  </label>
-                </div>
-              </fieldset>
-            </form>
+                <fieldset class="filter-step">
+                  <legend>3. 入金スピードを選ぶ</legend>
+                  <div class="option-grid option-grid-3">
+                    <label class="filter-option is-selected">
+                      <input type="radio" name="speed" value="same-day" checked>
+                      <span>即日</span>
+                      <i aria-hidden="true">✓</i>
+                    </label>
+                    <label class="filter-option">
+                      <input type="radio" name="speed" value="next-day">
+                      <span>翌日</span>
+                    </label>
+                    <label class="filter-option">
+                      <input type="radio" name="speed" value="two-three-days">
+                      <span>2〜3日</span>
+                    </label>
+                  </div>
+                </fieldset>
+              </form>
 
-            <div class="filter-actions">
-              <button class="compare-button" type="button">
-                <span>絞り込み検索</span>
-              </button>
-              <button class="reset-button" type="button">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 3-6.2M4 4v6h6"/></svg>
-                <span>選択した条件をリセットする</span>
-              </button>
+              <div class="filter-actions">
+                <button class="compare-button" type="button">
+                  <span>絞り込み検索</span>
+                </button>
+                <button class="reset-button" type="button">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 3-6.2M4 4v6h6"/></svg>
+                  <span>選択した条件をリセットする</span>
+                </button>
+              </div>
             </div>
 
           </div>
@@ -192,7 +194,7 @@
             <div class="pickup-heading">
               <p class="pickup-label">PICK UP!!</p>
               <p class="pickup-copy">＼この3つから選べば間違いなし／</p>
-              <h2 id="comparison-title">ファクタリング会社おすすめTOP3</h2>
+              <h2 id="comparison-title">個人事業主向けファクタリング会社おすすめTOP3</h2>
             </div>
 
             <div class="comparison-table-wrap">
@@ -222,11 +224,11 @@
                   <tr>
                     <th class="audience audience-personal" scope="rowgroup" rowspan="3">
                       <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="17" r="8"/><path d="M10 39c3-12 25-12 28 0"/><circle cx="24" cy="24" r="22"/></svg>
-                      <span>個人向け</span>
+                      <span>個人事業主向け</span>
                     </th>
                     <td class="rank rank-gold"><span>1</span><small>位</small></td>
                     <td class="company-cell">
-                      <strong class="brand-logo brand-paytner"><span>Paytner</span></strong>
+                      <strong class="brand-logo brand-paytner"><span>ペイトナー</span></strong>
                     </td>
                     <td class="rating-cell"><span class="stars">★★★★★</span><strong>4.9</strong></td>
                     <td>一律<strong>10%</strong></td>
@@ -242,7 +244,7 @@
                   <tr>
                     <td class="rank rank-silver"><span>2</span><small>位</small></td>
                     <td class="company-cell">
-                      <strong class="brand-logo brand-labol"><span>labol</span></strong>
+                      <strong class="brand-logo brand-labol"><span>ラボル</span></strong>
                     </td>
                     <td class="rating-cell"><span class="stars">★★★★<em>★</em></span><strong>4.2</strong></td>
                     <td>一律<strong>10%</strong></td>
@@ -329,7 +331,7 @@
 
             <div class="top3-compare" aria-label="おすすめ3社比較" data-audience-panel="personal">
               <div class="top3-compare-head">
-                <p>手数料 × 入金スピード × 審査通過率で選ぶ</p>
+                <p>手数料×入金スピード×審査通過率で選ぶ</p>
                 <h3>ファクタリング会社<br class="mobile-title-break">比較表</h3>
               </div>
 
@@ -414,8 +416,8 @@
 
             <div class="top3-compare is-filter-hidden" aria-label="法人向けおすすめ3社比較" data-audience-panel="corporate">
               <div class="top3-compare-head">
-                <p>審査通過率 × 入金スピード × 法人対応力で選ぶ</p>
-                <h3>法人向けファクタリング会社<br class="mobile-title-break">比較表</h3>
+                <p>手数料×入金スピード×審査通過率で選ぶ</p>
+                <h3>ファクタリング会社<br class="mobile-title-break">比較表</h3>
               </div>
 
               <div class="top3-table-wrap">
@@ -502,8 +504,8 @@
         <section class="ranking-detail-section" id="ranking" aria-labelledby="ranking-detail-title">
           <div class="ranking-detail-inner">
             <p class="section-label compact"><span></span><strong>個人事業主向け</strong><span></span></p>
-            <h2 id="ranking-detail-title">ファクタリング会社総合<br class="mobile-title-break">ランキング</h2>
-            <p class="ranking-detail-lead">手数料・スピード・使いやすさを徹底比較。個人事業主・フリーランスにおすすめの<br>ファクタリングサービスを厳選しました。</p>
+            <h2 id="ranking-detail-title">個人事業主向けファクタリングおすすめ会社</h2>
+            <p class="ranking-detail-lead">50〜300万・即日の条件に合うサービスを表示しています。</p>
 
             <article class="ranking-card rank-one" id="paytner-detail">
               <div class="rank-ribbon"><span>1</span><small>位</small></div>
@@ -1033,15 +1035,6 @@
         <section class="faq-section" id="faq" aria-labelledby="faq-title">
           <div class="faq-inner">
             <div class="faq-heading">
-              <svg class="faq-bubbles" viewBox="0 0 130 82" aria-hidden="true">
-                <path class="bubble-green" d="M47 6c-23 0-38 13-38 32 0 10 4 19 13 25l-5 13 18-7c4 1 8 1 12 1 23 0 38-13 38-32S70 6 47 6z"></path>
-                <path class="bubble-navy" d="M86 34c20 0 33 11 33 26 0 8-4 15-11 20l4 10-15-5c-3 1-7 1-11 1-20 0-33-11-33-26s13-26 33-26z"></path>
-                <path d="M36 30c1-9 7-15 16-15 10 0 17 6 17 15 0 8-5 12-12 16-5 3-6 6-6 11"></path>
-                <circle cx="51" cy="66" r="2.5"></circle>
-                <circle cx="78" cy="60" r="2.3"></circle>
-                <circle cx="88" cy="60" r="2.3"></circle>
-                <circle cx="98" cy="60" r="2.3"></circle>
-              </svg>
               <p class="faq-label"><span></span><strong>06</strong><span></span></p>
               <h2 id="faq-title">よくある質問</h2>
               <p>ファクタリングに関してよくいただくご質問にお答えします。</p>
@@ -1166,16 +1159,12 @@
 
           <div class="mobile-footer-group">
             <h3>サイトメニュー</h3>
-            <a href="#ranking">ランキング</a>
-            <a href="#comparison">比較表</a>
-            <a href="#columns">コラム</a>
-            <a href="#faq">FAQ</a>
-            <a href="company.html">運営会社情報</a>
+            <a href="company.html">運営者情報</a>
             <a href="privacy-policy.html">プライバシーポリシー</a>
           </div>
 
           <a class="mobile-footer-top" href="#top">⌃<span>ページの先頭へ</span></a>
-          <p class="mobile-footer-copy">© 2025 請求書ファクタリング比較ナビ All Rights Reserved.</p>
+          <p class="mobile-footer-copy">© 2026 ファクタリング比較プラザ</p>
         </div>
 
         <div class="simple-footer-inner">
@@ -1190,15 +1179,11 @@
           </a>
 
           <nav class="simple-footer-nav" aria-label="フッターメニュー">
-            <a href="#ranking">ランキング</a>
-            <a href="#comparison">比較表</a>
-            <a href="#columns">コラム</a>
-            <a href="#faq">FAQ</a>
-            <a href="company.html">運営会社情報</a>
+            <a href="company.html">運営者情報</a>
             <a href="privacy-policy.html">プライバシーポリシー</a>
           </nav>
         </div>
-        <p class="simple-footer-copy">© 2025 請求書ファクタリング比較ナビ All Rights Reserved.</p>
+        <p class="simple-footer-copy">© 2026 ファクタリング比較プラザ</p>
       </footer>
     </div>
     <script>
@@ -1251,6 +1236,7 @@
         const rankingTitle = document.querySelector("#ranking-detail-title");
         const rankingLead = document.querySelector(".ranking-detail-lead");
         const rankingAudienceLabel = document.querySelector(".ranking-detail-section .section-label.compact strong");
+        const comparisonTitle = document.querySelector("#comparison-title");
         const initialRankingTitle = rankingTitle?.innerHTML || "";
         const initialRankingLead = rankingLead?.innerHTML || "";
         const initialRankingAudienceLabel = rankingAudienceLabel?.textContent || "";
@@ -1469,8 +1455,11 @@
           }
 
           const label = filterLabels.type[criteria.type] || "条件";
-          rankingTitle.textContent = `${label}向けファクタリング おすすめ会社`;
+          rankingTitle.textContent = `${label}向けファクタリングおすすめ会社`;
           rankingLead.textContent = `${filterLabels.amount[criteria.amount]}・${filterLabels.speed[criteria.speed]}の条件に合うサービスを表示しています。`;
+          if (comparisonTitle) {
+            comparisonTitle.textContent = `${label}向けファクタリング会社おすすめTOP3`;
+          }
           updateAudiencePanels(criteria.type);
         };
 
@@ -1529,6 +1518,7 @@
           if (rankingTitle) rankingTitle.innerHTML = initialRankingTitle;
           if (rankingLead) rankingLead.innerHTML = initialRankingLead;
           if (rankingAudienceLabel) rankingAudienceLabel.textContent = initialRankingAudienceLabel;
+          if (comparisonTitle) comparisonTitle.textContent = "個人事業主向けファクタリング会社おすすめTOP3";
         };
 
         const applyFilters = () => {
@@ -1614,6 +1604,16 @@
         syncAll();
         setActiveAudienceTab(getCriteria().type);
         applyFilters();
+      })();
+
+      (() => {
+        if ("scrollRestoration" in history) {
+          history.scrollRestoration = "manual";
+        }
+
+        if (!window.location.hash) {
+          requestAnimationFrame(() => window.scrollTo(0, 0));
+        }
       })();
     </script>
   </body>

@@ -10435,3 +10435,298 @@ a {
     content: none;
   }
 }
+
+.filter-panel {
+  padding: clamp(16px, 2.4vw, 24px);
+  border: 2px solid rgba(17, 124, 69, .38);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .84);
+}
+
+.comparison-table .company-cell .brand-logo {
+  width: auto;
+  min-width: 0;
+  min-height: 0;
+  color: var(--navy);
+  font-size: clamp(16px, 1.8vw, 22px);
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.comparison-table .company-cell .brand-logo::before {
+  content: none;
+}
+
+.comparison-table .company-cell .brand-logo span {
+  display: inline !important;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  white-space: normal;
+}
+
+.filter-panel .filter-result-status {
+  margin-bottom: 0;
+}
+
+.faq-bubbles {
+  display: none;
+}
+
+.simple-footer-nav {
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .comparison-table tbody tr,
+  .comparison-table tbody tr:nth-child(n+4) {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas: none;
+    min-height: 0;
+    margin: 0 0 14px;
+    padding: 84px 12px 12px;
+    border: 1px solid #d7dde7;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, .98);
+    box-shadow: 0 3px 11px rgba(7, 31, 70, .08);
+    overflow: hidden;
+  }
+
+  .comparison-table tbody tr:nth-child(1),
+  .comparison-table tbody tr:nth-child(4) {
+    border-color: #e0aa2f;
+  }
+
+  .comparison-table tbody tr:nth-child(2),
+  .comparison-table tbody tr:nth-child(5) {
+    border-color: #cbd1da;
+  }
+
+  .comparison-table tbody tr:nth-child(3),
+  .comparison-table tbody tr:nth-child(6) {
+    border-color: #d48a34;
+  }
+
+  .comparison-table .rank,
+  .comparison-table tbody tr:nth-child(n+4) .rank {
+    position: absolute;
+    top: 0;
+    left: 14px;
+    grid-area: auto;
+    width: 48px;
+    height: 80px;
+    color: #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 82%, 50% 100%, 0 82%);
+    border: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    text-align: center;
+  }
+
+  .comparison-table .rank span,
+  .comparison-table tbody tr:nth-child(n+4) .rank span {
+    display: inline-block;
+    margin-top: 25px;
+    font-size: 29px;
+    line-height: .85;
+  }
+
+  .comparison-table tbody tr .company-cell,
+  .comparison-table tbody tr:nth-child(n+4) .company-cell {
+    position: absolute;
+    top: 23px;
+    left: 70px;
+    right: 118px;
+    grid-area: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    border-left: 0;
+  }
+
+  .comparison-table tbody tr .company-cell .brand-logo,
+  .comparison-table tbody tr:nth-child(n+4) .company-cell .brand-logo {
+    width: auto;
+    min-width: 0;
+    min-height: 0;
+    color: var(--navy);
+    font-size: 17px;
+    font-weight: 900;
+    line-height: 1.15;
+    text-align: left;
+  }
+
+  .comparison-table tbody tr .company-cell .brand-logo::before,
+  .comparison-table tbody tr:nth-child(n+4) .company-cell .brand-logo::before {
+    content: none;
+  }
+
+  .comparison-table tbody tr .company-cell .brand-logo span,
+  .comparison-table tbody tr:nth-child(n+4) .company-cell .brand-logo span {
+    display: inline !important;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    white-space: normal;
+  }
+
+  .comparison-table tbody tr .rating-cell,
+  .comparison-table tbody tr:nth-child(n+4) .rating-cell {
+    position: absolute;
+    top: 34px;
+    right: 70px;
+    display: flex;
+    align-items: center;
+    width: auto;
+    gap: 5px;
+    color: var(--navy);
+    white-space: nowrap;
+  }
+
+  .comparison-table tbody tr::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 19px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 50% 31%, #0c8f51 0 7px, transparent 8px),
+      radial-gradient(ellipse at 50% 82%, #0c8f51 0 13px, transparent 14px),
+      #e6f4ed;
+  }
+
+  .comparison-table tbody tr::after {
+    content: "個人事業主向け";
+    position: absolute;
+    top: 64px;
+    right: 8px;
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .comparison-table tbody tr:nth-child(n+4)::after {
+    content: "法人向け";
+    right: 15px;
+    font-size: 12px;
+  }
+
+  .comparison-table tbody tr td:nth-of-type(4),
+  .comparison-table tbody tr td:nth-of-type(5),
+  .comparison-table tbody tr td:nth-of-type(6),
+  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(4),
+  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(5),
+  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(6) {
+    position: relative;
+    grid-area: auto;
+    display: block;
+    min-height: 50px;
+    padding: 23px 6px 7px;
+    border-top: 1px solid #dbe0e8;
+    border-left: 1px solid #dbe0e8;
+    background: #fff;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-table tbody tr td:nth-of-type(4),
+  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(4) {
+    border-left: 0;
+  }
+
+  .comparison-table tbody tr td:nth-of-type(4)::before,
+  .comparison-table tbody tr td:nth-of-type(5)::before,
+  .comparison-table tbody tr td:nth-of-type(6)::before,
+  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(4)::before,
+  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(5)::before,
+  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(6)::before {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 100%;
+    margin-bottom: 0;
+    color: var(--navy);
+    font-size: 11px;
+    line-height: 1;
+  }
+
+  .comparison-table tbody tr td:last-child,
+  .comparison-table tbody tr:nth-child(n+4) td:last-child {
+    grid-column: 1 / -1;
+    grid-area: auto;
+    display: block;
+    width: 100%;
+    padding: 12px 0 0;
+    border-left: 0;
+  }
+
+  .comparison-table tbody tr .site-actions,
+  .comparison-table tbody tr:nth-child(n+4) .site-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, .9fr);
+    gap: 8px;
+    width: 100%;
+  }
+
+  .comparison-table tbody tr .site-button,
+  .comparison-table tbody tr:nth-child(n+4) .site-button {
+    width: 100%;
+    min-height: 38px;
+    padding: 7px 6px;
+    font-size: 12px;
+    line-height: 1.15;
+  }
+
+  .comparison-table tbody tr .site-button.detail,
+  .comparison-table tbody tr:nth-child(n+4) .site-button.detail {
+    min-height: 38px;
+    padding: 7px 4px;
+    font-size: 12px;
+  }
+
+  .filter-panel {
+    padding: 14px 12px 12px;
+  }
+
+  .mobile-footer-group {
+    border-bottom: 1px solid rgba(255, 255, 255, .28);
+  }
+}
+
+@media (max-width: 430px) {
+  .comparison-table tbody tr,
+  .comparison-table tbody tr:nth-child(n+4) {
+    padding: 82px 9px 10px;
+  }
+
+  .comparison-table tbody tr .company-cell,
+  .comparison-table tbody tr:nth-child(n+4) .company-cell {
+    right: 112px;
+  }
+
+  .comparison-table tbody tr .company-cell .brand-logo,
+  .comparison-table tbody tr:nth-child(n+4) .company-cell .brand-logo {
+    font-size: 15px;
+  }
+
+  .comparison-table tbody tr td:nth-of-type(4),
+  .comparison-table tbody tr td:nth-of-type(5),
+  .comparison-table tbody tr td:nth-of-type(6),
+  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(4),
+  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(5),
+  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(6) {
+    min-height: 48px;
+    padding: 22px 4px 6px;
+    font-size: 11px;
+  }
+}
