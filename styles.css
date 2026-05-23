@@ -11347,3 +11347,78 @@ a {
     font-size: 13px;
   }
 }
+
+/* V5 comparison table corrections */
+.top3-table thead .brand-logo {
+  display: block !important;
+  width: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 8px auto 0 !important;
+  color: var(--navy) !important;
+  font-size: clamp(17px, 2.2vw, 25px) !important;
+  font-weight: 900 !important;
+  line-height: 1.25 !important;
+  text-align: center !important;
+}
+
+.top3-table thead .brand-logo::before {
+  content: none !important;
+  display: none !important;
+}
+
+.top3-table thead .brand-logo span {
+  display: inline !important;
+  color: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  white-space: normal !important;
+}
+
+.top3-thumb {
+  position: relative;
+  display: block !important;
+  width: clamp(96px, 10vw, 132px) !important;
+  aspect-ratio: 1 / 1;
+  margin: 10px auto 8px !important;
+  border: 3px solid #f1dfc0;
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  overflow: hidden;
+}
+
+.top3-thumb-paytner { background-image: url("assets/v3-product-paytner.png"); }
+.top3-thumb-labol { background-image: url("assets/v3-product-labol.png"); }
+.top3-thumb-ququmo { background-image: url("assets/v3-product-ququmo.png"); }
+.top3-thumb-mentor { background-image: url("assets/corporate-product-mentor.png"); }
+.top3-thumb-accel { background-image: url("assets/corporate-product-accel.png"); }
+.top3-thumb-ag { background-image: url("assets/corporate-product-ag.png"); }
+
+.top3-thumb img {
+  position: relative !important;
+  z-index: 1;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 0 !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+@media (max-width: 560px) {
+  .top3-table thead .brand-logo {
+    margin-top: 6px !important;
+    font-size: 12px !important;
+  }
+
+  .top3-thumb {
+    width: clamp(70px, 22vw, 92px) !important;
+    margin: 7px auto 5px !important;
+    border-width: 2px;
+  }
+}
