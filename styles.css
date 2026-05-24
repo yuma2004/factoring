@@ -10588,790 +10588,46 @@ a {
   }
 }
 
+
+/* Final responsive comparison cleanup */
+.comparison-table .company-cell .brand-logo,
 .top3-table thead .brand-logo {
-  width: auto;
-  min-width: 0;
-  min-height: 0;
-  margin-top: 0;
-  color: var(--navy);
-  font-size: clamp(18px, 2.4vw, 26px);
-  font-weight: 900;
-  line-height: 1.25;
-  text-decoration: none;
-}
-
-.top3-table thead .brand-logo::before {
-  content: none;
-}
-
-.top3-table thead .brand-logo span {
-  display: inline !important;
-  color: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  white-space: normal;
-}
-
-.top3-table thead .top3-logo-thumb {
-  display: none;
-}
-
-@media (max-width: 560px) {
-  .top3-table thead .brand-logo {
-    width: auto;
-    min-width: 0;
-    min-height: 0;
-    font-size: 13px;
-    line-height: 1.25;
-  }
-
-  .top3-table thead .brand-logo::before {
-    content: none;
-  }
-}
-
-.filter-panel {
-  padding: clamp(16px, 2.4vw, 24px);
-  border: 2px solid rgba(17, 124, 69, .38);
-  border-radius: 10px;
-  background: rgba(255, 255, 255, .84);
-}
-
-.comparison-table .company-cell .brand-logo {
-  width: auto;
-  min-width: 0;
-  min-height: 0;
-  color: var(--navy);
-  font-size: clamp(16px, 1.8vw, 22px);
-  font-weight: 900;
-  line-height: 1.25;
-}
-
-.comparison-table .company-cell .brand-logo::before {
-  content: none;
-}
-
-.comparison-table .company-cell .brand-logo span {
-  display: inline !important;
-  color: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  white-space: normal;
-}
-
-.filter-panel .filter-result-status {
-  margin-bottom: 0;
-}
-
-.faq-bubbles {
-  display: none;
-}
-
-.simple-footer-nav {
+  display: inline-flex !important;
+  align-items: center;
   justify-content: center;
-}
-
-@media (max-width: 900px) {
-  .comparison-table tbody tr,
-  .comparison-table tbody tr:nth-child(n+4) {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-areas: none;
-    min-height: 0;
-    margin: 0 0 14px;
-    padding: 84px 12px 12px;
-    border: 1px solid #d7dde7;
-    border-radius: 6px;
-    background: rgba(255, 255, 255, .98);
-    box-shadow: 0 3px 11px rgba(7, 31, 70, .08);
-    overflow: hidden;
-  }
-
-  .comparison-table tbody tr:nth-child(1),
-  .comparison-table tbody tr:nth-child(4) {
-    border-color: #e0aa2f;
-  }
-
-  .comparison-table tbody tr:nth-child(2),
-  .comparison-table tbody tr:nth-child(5) {
-    border-color: #cbd1da;
-  }
-
-  .comparison-table tbody tr:nth-child(3),
-  .comparison-table tbody tr:nth-child(6) {
-    border-color: #d48a34;
-  }
-
-  .comparison-table .rank,
-  .comparison-table tbody tr:nth-child(n+4) .rank {
-    position: absolute;
-    top: 0;
-    left: 14px;
-    grid-area: auto;
-    width: 48px;
-    height: 80px;
-    color: #fff;
-    clip-path: polygon(0 0, 100% 0, 100% 82%, 50% 100%, 0 82%);
-    border: 0;
-    font-family: Georgia, "Times New Roman", serif;
-    text-align: center;
-  }
-
-  .comparison-table .rank span,
-  .comparison-table tbody tr:nth-child(n+4) .rank span {
-    display: inline-block;
-    margin-top: 25px;
-    font-size: 29px;
-    line-height: .85;
-  }
-
-  .comparison-table tbody tr .company-cell,
-  .comparison-table tbody tr:nth-child(n+4) .company-cell {
-    position: absolute;
-    top: 23px;
-    left: 70px;
-    right: 118px;
-    grid-area: auto;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    min-width: 0;
-    min-height: 0;
-    padding: 0;
-    border-left: 0;
-  }
-
-  .comparison-table tbody tr .company-cell .brand-logo,
-  .comparison-table tbody tr:nth-child(n+4) .company-cell .brand-logo {
-    width: auto;
-    min-width: 0;
-    min-height: 0;
-    color: var(--navy);
-    font-size: 17px;
-    font-weight: 900;
-    line-height: 1.15;
-    text-align: left;
-  }
-
-  .comparison-table tbody tr .company-cell .brand-logo::before,
-  .comparison-table tbody tr:nth-child(n+4) .company-cell .brand-logo::before {
-    content: none;
-  }
-
-  .comparison-table tbody tr .company-cell .brand-logo span,
-  .comparison-table tbody tr:nth-child(n+4) .company-cell .brand-logo span {
-    display: inline !important;
-    color: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    white-space: normal;
-  }
-
-  .comparison-table tbody tr .rating-cell,
-  .comparison-table tbody tr:nth-child(n+4) .rating-cell {
-    position: absolute;
-    top: 34px;
-    right: 70px;
-    display: flex;
-    align-items: center;
-    width: auto;
-    gap: 5px;
-    color: var(--navy);
-    white-space: nowrap;
-  }
-
-  .comparison-table tbody tr .stars,
-  .comparison-table tbody tr:nth-child(n+4) .stars {
-    font-size: 13px;
-    letter-spacing: -.12em;
-  }
-
-  .comparison-table tbody tr .rating-cell strong,
-  .comparison-table tbody tr:nth-child(n+4) .rating-cell strong {
-    font-size: 16px;
-  }
-
-  .comparison-table tbody tr::before {
-    content: "";
-    position: absolute;
-    top: 20px;
-    right: 19px;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background:
-      radial-gradient(circle at 50% 31%, #0c8f51 0 7px, transparent 8px),
-      radial-gradient(ellipse at 50% 82%, #0c8f51 0 13px, transparent 14px),
-      #e6f4ed;
-  }
-
-  .comparison-table tbody tr::after {
-    content: "個人事業主向け";
-    position: absolute;
-    top: 64px;
-    right: 8px;
-    color: var(--navy);
-    font-size: 11px;
-    font-weight: 900;
-    line-height: 1;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4)::after {
-    content: "法人向け";
-    right: 15px;
-    font-size: 12px;
-  }
-
-  .comparison-table tbody tr td:nth-of-type(4),
-  .comparison-table tbody tr td:nth-of-type(5),
-  .comparison-table tbody tr td:nth-of-type(6),
-  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(4),
-  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(5),
-  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(6) {
-    position: relative;
-    grid-area: auto;
-    display: block;
-    min-height: 50px;
-    padding: 23px 6px 7px;
-    border-top: 1px solid #dbe0e8;
-    border-left: 1px solid #dbe0e8;
-    background: #fff;
-    text-align: center;
-    font-size: 13px;
-    font-weight: 900;
-    line-height: 1.25;
-    overflow-wrap: anywhere;
-  }
-
-  .comparison-table tbody tr td:nth-of-type(4),
-  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(4) {
-    border-left: 0;
-  }
-
-  .comparison-table tbody tr td:nth-of-type(4)::before,
-  .comparison-table tbody tr td:nth-of-type(5)::before,
-  .comparison-table tbody tr td:nth-of-type(6)::before,
-  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(4)::before,
-  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(5)::before,
-  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(6)::before {
-    position: absolute;
-    top: 7px;
-    left: 0;
-    width: 100%;
-    margin-bottom: 0;
-    color: var(--navy);
-    font-size: 11px;
-    line-height: 1;
-  }
-
-  .comparison-table tbody tr td:last-child,
-  .comparison-table tbody tr:nth-child(n+4) td:last-child {
-    grid-column: 1 / -1;
-    grid-area: auto;
-    display: block;
-    width: 100%;
-    padding: 12px 0 0;
-    border-left: 0;
-  }
-
-  .comparison-table tbody tr .site-actions,
-  .comparison-table tbody tr:nth-child(n+4) .site-actions {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, .9fr);
-    gap: 8px;
-    width: 100%;
-  }
-
-  .comparison-table tbody tr .site-button,
-  .comparison-table tbody tr:nth-child(n+4) .site-button {
-    width: 100%;
-    min-height: 38px;
-    padding: 7px 6px;
-    font-size: 12px;
-    line-height: 1.15;
-  }
-
-  .comparison-table tbody tr .site-button.detail,
-  .comparison-table tbody tr:nth-child(n+4) .site-button.detail {
-    min-height: 38px;
-    padding: 7px 4px;
-    font-size: 12px;
-  }
-
-  .filter-panel {
-    padding: 14px 12px 12px;
-  }
-
-  .mobile-footer-group {
-    border-bottom: 1px solid rgba(255, 255, 255, .28);
-  }
-}
-
-@media (max-width: 430px) {
-  .comparison-table tbody tr,
-  .comparison-table tbody tr:nth-child(n+4) {
-    padding: 82px 9px 10px;
-  }
-
-  .comparison-table tbody tr .company-cell,
-  .comparison-table tbody tr:nth-child(n+4) .company-cell {
-    right: 112px;
-  }
-
-  .comparison-table tbody tr .company-cell .brand-logo,
-  .comparison-table tbody tr:nth-child(n+4) .company-cell .brand-logo {
-    font-size: 15px;
-  }
-
-  .comparison-table tbody tr td:nth-of-type(4),
-  .comparison-table tbody tr td:nth-of-type(5),
-  .comparison-table tbody tr td:nth-of-type(6),
-  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(4),
-  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(5),
-  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(6) {
-    min-height: 48px;
-    padding: 22px 4px 6px;
-    font-size: 11px;
-  }
-}
-
-/* V4 correction overrides */
-.comparison-section .filter-section {
-  margin: 18px 0 28px;
-  padding: 0;
-  background: transparent;
-  border: 0;
-}
-
-.comparison-section .filter-inner {
-  width: min(620px, 100%);
-}
-
-.comparison-section .filter-panel {
-  padding: 12px;
-}
-
-.simple-footer-inner,
-.simple-footer-nav {
-  justify-content: center;
-}
-
-@media (max-width: 900px) {
-  .comparison-section .filter-section {
-    margin: 12px 0 22px;
-  }
-
-  .comparison-section .filter-inner {
-    width: 100%;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) {
-    grid-template-columns: 58px minmax(0, 1fr) 92px;
-    grid-template-areas:
-      "rank company site"
-      "rank details site";
-    min-height: 128px;
-    padding: 0;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) .rank {
-    position: static;
-    grid-area: rank;
-    display: grid;
-    place-items: center;
-    width: 100%;
-    height: 100%;
-    min-height: 128px;
-    clip-path: none;
-    color: var(--navy);
-    background: transparent;
-    border-right: 1px solid #dbe0e8;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) .rank span {
-    margin-top: 0;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) .company-cell {
-    position: static;
-    grid-area: company;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 56px;
-    padding: 10px 8px;
-    border-left: 0;
-    border-bottom: 1px solid #dbe0e8;
-    background: #f4fbf7;
-    text-align: center;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) .company-cell .brand-logo {
-    width: 100%;
-    font-size: 17px;
-    line-height: 1.2;
-    text-align: center;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4)::before,
-  .comparison-table tbody tr:nth-child(n+4)::after,
-  .comparison-table tbody tr:nth-child(n+4) .rating-cell {
-    display: none;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(4),
-  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(5),
-  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(6) {
-    grid-area: details;
-    display: block;
-    width: 33.333%;
-    min-height: 72px;
-    padding: 24px 4px 8px;
-    border-top: 0;
-    border-left: 1px solid #dbe0e8;
-    font-size: 12px;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(4) {
-    margin-left: 0;
-    border-left: 0;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(5) {
-    margin-left: 33.333%;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(6) {
-    margin-left: 66.666%;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) td:last-child {
-    grid-area: site;
-    display: flex;
-    align-items: center;
-    width: auto;
-    padding: 8px;
-    border-left: 1px solid #dbe0e8;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) .site-actions {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) .site-button,
-  .comparison-table tbody tr:nth-child(n+4) .site-button.detail {
-    min-height: 42px;
-    padding: 6px 4px;
-    font-size: 12px;
-  }
-
-  .mobile-footer-group {
-    display: flex;
-    justify-content: center;
-    gap: 18px;
-    border-bottom: 0;
-  }
-
-  .mobile-footer-group a {
-    font-size: 13px;
-    white-space: nowrap;
-  }
-}
-
-@media (max-width: 900px) {
-  .comparison-table tbody tr:nth-child(n+4) {
-    position: relative;
-    display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    grid-template-areas: none !important;
-    min-height: 0;
-    margin: 0 0 14px;
-    padding: 84px 12px 12px !important;
-    border-radius: 6px;
-    background: rgba(255, 255, 255, .98);
-    box-shadow: 0 3px 11px rgba(7, 31, 70, .08);
-    overflow: hidden;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) .rank {
-    position: absolute;
-    top: 0;
-    left: 14px;
-    grid-area: auto !important;
-    display: block;
-    width: 48px;
-    height: 80px;
-    min-height: 0;
-    clip-path: polygon(0 0, 100% 0, 100% 82%, 50% 100%, 0 82%);
-    border: 0;
-    color: #fff;
-    font-family: Georgia, "Times New Roman", serif;
-    text-align: center;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) .rank-gold {
-    background: linear-gradient(180deg, #efc33b, #d79b13);
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) .rank-silver {
-    background: linear-gradient(180deg, #d9dde2, #89929d);
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) .rank-bronze {
-    background: linear-gradient(180deg, #d99537, #ac6515);
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) .rank span {
-    display: inline-block;
-    margin-top: 25px;
-    font-size: 29px;
-    line-height: .85;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) .company-cell {
-    position: absolute;
-    top: 18px;
-    left: 70px;
-    right: 118px;
-    grid-area: auto !important;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    min-width: 0;
-    min-height: 0;
-    padding: 0;
-    border: 0;
-    background: transparent;
-  }
-
-  .comparison-table tbody tr .company-cell .brand-logo,
-  .comparison-table tbody tr:nth-child(n+4) .company-cell .brand-logo {
-    display: inline-flex;
-    width: min(90px, 100%);
-    min-width: 0;
-    min-height: 42px;
-    font-size: 0;
-    line-height: 1;
-  }
-
-  .comparison-table tbody tr .company-cell .brand-logo span,
-  .comparison-table tbody tr:nth-child(n+4) .company-cell .brand-logo span {
-    display: none !important;
-  }
-
-  .comparison-table tbody tr .company-cell .brand-logo::before,
-  .comparison-table tbody tr:nth-child(n+4) .company-cell .brand-logo::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 42px;
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: contain;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) .rating-cell {
-    position: absolute;
-    top: 34px;
-    right: 70px;
-    display: flex;
-    align-items: center;
-    width: auto;
-    gap: 5px;
-    color: var(--navy);
-    white-space: nowrap;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4)::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 19px;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background:
-      radial-gradient(circle at 50% 31%, #0c8f51 0 7px, transparent 8px),
-      radial-gradient(ellipse at 50% 82%, #0c8f51 0 13px, transparent 14px),
-      #e6f4ed;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4)::after {
-    content: "法人向け";
-    display: block;
-    position: absolute;
-    top: 64px;
-    right: 15px;
-    color: var(--navy);
-    font-size: 12px;
-    font-weight: 900;
-    line-height: 1;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(4),
-  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(5),
-  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(6) {
-    position: relative;
-    grid-area: auto !important;
-    grid-column: auto !important;
-    display: block;
-    width: auto !important;
-    min-height: 50px;
-    margin-left: 0 !important;
-    padding: 23px 6px 7px;
-    border-top: 1px solid #dbe0e8;
-    border-left: 1px solid #dbe0e8;
-    background: #fff;
-    text-align: center;
-    font-size: 13px;
-    font-weight: 900;
-    line-height: 1.25;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(4) {
-    border-left: 0;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) td:last-child {
-    grid-area: auto !important;
-    grid-column: 1 / -1 !important;
-    display: block !important;
-    width: 100% !important;
-    padding: 12px 0 0;
-    border-left: 0;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) .site-actions {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, .9fr);
-    gap: 8px;
-    width: 100%;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) .site-button,
-  .comparison-table tbody tr:nth-child(n+4) .site-button.detail {
-    width: 100%;
-    min-height: 38px;
-    padding: 7px 6px;
-    font-size: 12px;
-    line-height: 1.15;
-  }
-
-  .top3-table thead .brand-logo {
-    display: inline-flex;
-    width: min(94px, 100%);
-    min-width: 0;
-    min-height: 34px;
-    font-size: 0;
-    line-height: 1;
-  }
-
-  .top3-table thead .brand-logo span {
-    display: none !important;
-  }
-
-  .top3-table thead .brand-logo::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 34px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-  }
-}
-
-@media (max-width: 430px) {
-  .comparison-table tbody tr:nth-child(n+4) {
-    padding-top: 102px !important;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) .company-cell {
-    top: 18px;
-    left: 70px;
-    right: 78px;
-    height: 44px;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) .company-cell .brand-logo {
-    width: min(150px, 100%);
-    min-width: 0;
-    min-height: 42px;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) .company-cell .brand-logo::before {
-    height: 42px;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) .rating-cell {
-    top: 66px;
-    right: auto;
-    left: 70px;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) .stars {
-    font-size: 14px;
-    letter-spacing: -.1em;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4)::before {
-    top: 20px;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4)::after {
-    top: 64px;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) .site-actions {
-    grid-template-columns: minmax(86px, .72fr) minmax(0, 1.62fr);
-    gap: 8px;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) .site-button.primary {
-    order: 2;
-    width: 100%;
-    height: 50px;
-    font-size: 20px;
-  }
-
-  .comparison-table tbody tr:nth-child(n+4) .site-button.detail {
-    order: 1;
-    width: 100%;
-    min-width: 0;
-    height: 42px;
-    min-height: 42px;
-    padding: 6px 8px;
-    font-size: 13px;
-  }
-}
-
-/* V5 comparison table corrections */
-.top3-table thead .brand-logo {
-  display: block !important;
   width: auto !important;
   min-width: 0 !important;
   min-height: 0 !important;
-  margin: 8px auto 0 !important;
+  margin: 0 auto !important;
   color: var(--navy) !important;
-  font-size: clamp(17px, 2.2vw, 25px) !important;
+  background: transparent !important;
   font-weight: 900 !important;
-  line-height: 1.25 !important;
+  line-height: 1.22 !important;
   text-align: center !important;
+  text-decoration: none !important;
 }
 
+.comparison-table .company-cell .brand-logo {
+  font-size: clamp(15px, 1.5vw, 20px) !important;
+}
+
+.top3-table thead .brand-logo {
+  margin-top: 8px !important;
+  font-size: clamp(17px, 2.2vw, 25px) !important;
+}
+
+.comparison-table .company-cell .brand-logo::before,
 .top3-table thead .brand-logo::before {
   content: none !important;
   display: none !important;
+  background-image: none !important;
 }
 
+.comparison-table .company-cell .brand-logo span,
 .top3-table thead .brand-logo span {
   display: inline !important;
   color: inherit !important;
-  font-size: inherit !important;
-  font-weight: inherit !important;
+  font: inherit !important;
   line-height: inherit !important;
   white-space: normal !important;
 }
@@ -11390,27 +10646,381 @@ a {
   overflow: hidden;
 }
 
-.top3-thumb-paytner { background-image: url("assets/v3-product-paytner.png"); }
-.top3-thumb-labol { background-image: url("assets/v3-product-labol.png"); }
-.top3-thumb-ququmo { background-image: url("assets/v3-product-ququmo.png"); }
-.top3-thumb-mentor { background-image: url("assets/corporate-product-mentor.png"); }
-.top3-thumb-accel { background-image: url("assets/corporate-product-accel.png"); }
-.top3-thumb-ag { background-image: url("assets/corporate-product-ag.png"); }
+.top3-thumb-paytner { background-image: url(assets/v3-product-paytner.png); }
+.top3-thumb-labol { background-image: url(assets/v3-product-labol.png); }
+.top3-thumb-ququmo { background-image: url(assets/v3-product-ququmo.png); }
+.top3-thumb-mentor { background-image: url(assets/corporate-product-mentor.png); }
+.top3-thumb-accel { background-image: url(assets/corporate-product-accel.png); }
+.top3-thumb-ag { background-image: url(assets/corporate-product-ag.png); }
 
-.top3-thumb img {
+.top3-thumb img,
+.ranking-card .service-visual img {
   position: relative !important;
   z-index: 1;
   display: block !important;
   width: 100% !important;
   height: 100% !important;
-  padding: 0 !important;
   object-fit: contain !important;
   object-position: center !important;
   opacity: 1 !important;
   visibility: visible !important;
+  transform: none !important;
+}
+
+.top3-thumb img {
+  padding: 0 !important;
+}
+
+.ranking-card .service-visual {
+  display: block !important;
+  min-height: 0 !important;
+  aspect-ratio: 16 / 9;
+  padding: 0 !important;
+  background: #fff !important;
+  overflow: hidden;
+  visibility: visible !important;
+}
+
+.ranking-card .service-visual::before,
+.ranking-card .service-visual div {
+  display: none !important;
+}
+
+.heading-line {
+  display: inline;
+}
+
+.pickup-heading h2,
+.top3-compare-head h3,
+.ranking-detail-section h2,
+.column-section h2,
+.faq-heading h2,
+.faq-cta h3,
+.ranking-card .ranking-left h3 {
+  overflow-wrap: normal;
+  word-break: keep-all;
+  line-break: strict;
+  text-wrap: balance;
+}
+
+@media (max-width: 900px) {
+  .comparison-table tbody tr .company-cell .brand-logo,
+  .comparison-table tbody tr:nth-child(n+4) .company-cell .brand-logo {
+    width: auto !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    font-size: 17px !important;
+    line-height: 1.18 !important;
+    text-align: left !important;
+  }
+
+  .comparison-table tbody tr .company-cell .brand-logo span,
+  .comparison-table tbody tr:nth-child(n+4) .company-cell .brand-logo span {
+    display: inline !important;
+  }
+
+  .comparison-table tbody tr:nth-child(n+4) {
+    position: relative !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-template-areas: none !important;
+    min-height: 0 !important;
+    margin: 0 0 14px !important;
+    padding: 84px 12px 12px !important;
+    border: 1px solid #d7dde7 !important;
+    border-radius: 6px !important;
+    background: rgba(255, 255, 255, .98) !important;
+    box-shadow: 0 3px 11px rgba(7, 31, 70, .08) !important;
+    overflow: hidden !important;
+  }
+
+  .comparison-table tbody tr:nth-child(4) {
+    border-color: #e0aa2f !important;
+  }
+
+  .comparison-table tbody tr:nth-child(5) {
+    border-color: #cbd1da !important;
+  }
+
+  .comparison-table tbody tr:nth-child(6) {
+    border-color: #d48a34 !important;
+  }
+
+  .comparison-table tbody tr:nth-child(n+4) .rank {
+    position: absolute !important;
+    top: 0 !important;
+    left: 14px !important;
+    grid-area: auto !important;
+    grid-column: auto !important;
+    display: block !important;
+    width: 48px !important;
+    height: 80px !important;
+    min-height: 0 !important;
+    color: #fff !important;
+    clip-path: polygon(0 0, 100% 0, 100% 82%, 50% 100%, 0 82%) !important;
+    border: 0 !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    text-align: center !important;
+  }
+
+  .comparison-table tbody tr:nth-child(4) .rank {
+    background: linear-gradient(180deg, #efc33b, #d79b13) !important;
+  }
+
+  .comparison-table tbody tr:nth-child(5) .rank {
+    background: linear-gradient(180deg, #d9dde2, #89929d) !important;
+  }
+
+  .comparison-table tbody tr:nth-child(6) .rank {
+    background: linear-gradient(180deg, #d99537, #ac6515) !important;
+  }
+
+  .comparison-table tbody tr:nth-child(n+4) .rank span {
+    display: inline-block !important;
+    margin-top: 25px !important;
+    font-size: 29px !important;
+    line-height: .85 !important;
+  }
+
+  .comparison-table tbody tr:nth-child(n+4) .rank small {
+    display: inline !important;
+    font-size: 14px !important;
+  }
+
+  .comparison-table tbody tr:nth-child(n+4) .company-cell {
+    position: absolute !important;
+    top: 23px !important;
+    left: 70px !important;
+    right: 160px !important;
+    grid-area: auto !important;
+    grid-column: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+
+  .comparison-table tbody tr:nth-child(n+4) .company-cell .brand-logo {
+    font-size: 14px !important;
+    line-height: 1.15 !important;
+    text-align: left !important;
+  }
+
+  .comparison-table tbody tr:nth-child(n+4) .company-cell .brand-logo span {
+    white-space: nowrap !important;
+  }
+
+  .comparison-table tbody tr:nth-child(n+4) .rating-cell {
+    position: absolute !important;
+    top: 34px !important;
+    right: 70px !important;
+    grid-area: auto !important;
+    grid-column: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    width: auto !important;
+    gap: 5px !important;
+    color: var(--navy) !important;
+    white-space: nowrap !important;
+  }
+
+  .comparison-table tbody tr:nth-child(n+4) .stars {
+    display: inline-block !important;
+    font-size: 17px !important;
+    letter-spacing: -.1em !important;
+    line-height: 1 !important;
+  }
+
+  .comparison-table tbody tr:nth-child(n+4) .rating-cell strong {
+    display: inline-block !important;
+    margin: 0 !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+  }
+
+  .comparison-table tbody tr:nth-child(n+4)::before {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    top: 20px !important;
+    right: 19px !important;
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 50% !important;
+    background:
+      radial-gradient(circle at 50% 31%, #0c8f51 0 7px, transparent 8px),
+      radial-gradient(ellipse at 50% 82%, #0c8f51 0 13px, transparent 14px),
+      #e6f4ed !important;
+  }
+
+  .comparison-table tbody tr:nth-child(n+4)::after {
+    content: "法人向け" !important;
+    display: block !important;
+    position: absolute !important;
+    top: 64px !important;
+    right: 15px !important;
+    color: var(--navy) !important;
+    font-size: 12px !important;
+    font-weight: 900 !important;
+    line-height: 1 !important;
+  }
+
+  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(4),
+  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(5),
+  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(6) {
+    position: relative !important;
+    grid-area: auto !important;
+    grid-column: auto !important;
+    display: block !important;
+    width: auto !important;
+    min-height: 50px !important;
+    margin-left: 0 !important;
+    padding: 23px 6px 7px !important;
+    border-top: 1px solid #dbe0e8 !important;
+    border-left: 1px solid #dbe0e8 !important;
+    background: #fff !important;
+    color: var(--navy) !important;
+    text-align: center !important;
+    font-size: 13px !important;
+    font-weight: 900 !important;
+    line-height: 1.25 !important;
+    writing-mode: horizontal-tb !important;
+    overflow-wrap: normal !important;
+  }
+
+  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(4) {
+    border-left: 0 !important;
+  }
+
+  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(4)::before,
+  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(5)::before,
+  .comparison-table tbody tr:nth-child(n+4) td:nth-of-type(6)::before {
+    position: absolute !important;
+    top: 7px !important;
+    left: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    color: var(--navy) !important;
+    font-size: 11px !important;
+    line-height: 1 !important;
+    writing-mode: horizontal-tb !important;
+  }
+
+  .comparison-table tbody tr:nth-child(n+4) td:last-child {
+    grid-area: auto !important;
+    grid-column: 1 / -1 !important;
+    display: block !important;
+    width: 100% !important;
+    padding: 8px 0 0 9px !important;
+    border-top: 1px solid #dbe0e8 !important;
+    border-left: 0 !important;
+  }
+
+  .comparison-table tbody tr:nth-child(n+4) .site-actions {
+    display: grid !important;
+    grid-template-columns: minmax(86px, .72fr) minmax(0, 1.62fr) !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  .comparison-table tbody tr:nth-child(n+4) .site-button.primary {
+    order: 2 !important;
+    width: 100% !important;
+    height: 50px !important;
+    min-height: 50px !important;
+    border: 0 !important;
+    color: #fff !important;
+    background: linear-gradient(180deg, #0b9650 0%, #04763f 100%) !important;
+    box-shadow: 0 7px 13px rgba(0, 111, 59, .18) !important;
+    font-size: 20px !important;
+  }
+
+  .comparison-table tbody tr:nth-child(n+4) .site-button.primary span {
+    color: inherit !important;
+  }
+
+  .comparison-table tbody tr:nth-child(n+4) .site-button.detail {
+    order: 1 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 42px !important;
+    min-height: 42px !important;
+    padding: 6px 8px !important;
+    font-size: 13px !important;
+  }
 }
 
 @media (max-width: 560px) {
+  .heading-line {
+    display: block;
+  }
+
+  .pickup-heading h2 {
+    max-width: 340px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: clamp(28px, 8vw, 32px) !important;
+    line-height: 1.18 !important;
+    letter-spacing: 0 !important;
+  }
+
+  .top3-compare-head h3 {
+    max-width: 340px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: clamp(34px, 9.5vw, 40px) !important;
+    line-height: 1.14 !important;
+    letter-spacing: 0 !important;
+  }
+
+  .top3-compare-head p {
+    white-space: normal !important;
+    text-wrap: balance;
+  }
+
+  .ranking-detail-section h2 {
+    max-width: 340px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: clamp(30px, 8.4vw, 36px) !important;
+    line-height: 1.18 !important;
+    letter-spacing: 0 !important;
+  }
+
+  .column-section h2 {
+    max-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: clamp(30px, 8.5vw, 36px) !important;
+    line-height: 1.16 !important;
+    letter-spacing: 0 !important;
+    white-space: normal !important;
+  }
+
+  .faq-heading h2 {
+    font-size: clamp(32px, 9vw, 38px) !important;
+    line-height: 1.14 !important;
+    letter-spacing: 0 !important;
+  }
+
+  .faq-cta h3 {
+    font-size: clamp(23px, 6.2vw, 28px) !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0 !important;
+  }
+
+  .ranking-card .ranking-left h3 {
+    max-width: 100%;
+    font-size: clamp(24px, 6.8vw, 28px) !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0 !important;
+    white-space: normal !important;
+  }
+
   .top3-table thead .brand-logo {
     margin-top: 6px !important;
     font-size: 12px !important;
@@ -11421,4 +11031,27 @@ a {
     margin: 7px auto 5px !important;
     border-width: 2px;
   }
+}
+
+@media (max-width: 374px) {
+  .pickup-heading h2,
+  .ranking-detail-section h2 {
+    font-size: 27px !important;
+  }
+
+  .top3-compare-head h3,
+  .column-section h2 {
+    font-size: 30px !important;
+  }
+
+  .ranking-card .ranking-left h3 {
+    font-size: 23px !important;
+  }
+}
+
+.comparison-table tbody tr.is-filter-hidden,
+.ranking-card.is-filter-hidden,
+[data-audience-panel].is-filter-hidden,
+.is-filter-hidden {
+  display: none !important;
 }

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>請求書ファクタリング比較ナビ</title>
-    <link rel="stylesheet" href="styles.css?v=20260524-compare-v5">
+    <link rel="stylesheet" href="styles.css?v=20260525-refactor-v13">
   </head>
   <body id="top">
     <div class="lp-shell">
@@ -111,7 +111,9 @@
             <div class="pickup-heading">
               <p class="pickup-label">個人事業主向け</p>
               <p class="pickup-copy">＼この3つから選べば間違いなし／</p>
-              <h2 id="comparison-title">個人事業主向けファクタリング会社おすすめTOP3</h2>
+              <h2 id="comparison-title">
+                <span class="heading-line">個人事業主向け</span><span class="heading-line">ファクタリング会社</span><span class="heading-line">おすすめTOP3</span>
+              </h2>
             </div>
 
             <div class="comparison-table-wrap">
@@ -331,7 +333,7 @@
             <div class="top3-compare" aria-label="おすすめ3社比較" data-audience-panel="personal">
               <div class="top3-compare-head">
                 <p><strong>【個人事業主向け】</strong><span>手数料×入金スピード×審査通過率で選ぶ</span></p>
-                <h3>ファクタリング会社比較表</h3>
+                <h3><span class="heading-line">ファクタリング会社</span><span class="heading-line">比較表</span></h3>
               </div>
 
               <div class="top3-table-wrap">
@@ -416,7 +418,7 @@
             <div class="top3-compare is-filter-hidden" aria-label="法人向けおすすめ3社比較" data-audience-panel="corporate">
               <div class="top3-compare-head">
                 <p><strong>【法人向け】</strong><span>手数料×入金スピード×審査通過率で選ぶ</span></p>
-                <h3>ファクタリング会社比較表</h3>
+                <h3><span class="heading-line">ファクタリング会社</span><span class="heading-line">比較表</span></h3>
               </div>
 
               <div class="top3-table-wrap">
@@ -503,7 +505,9 @@
         <section class="ranking-detail-section" id="ranking" aria-labelledby="ranking-detail-title">
           <div class="ranking-detail-inner">
             <p class="section-label compact"><span></span><strong>個人事業主向け</strong><span></span></p>
-            <h2 id="ranking-detail-title">ファクタリング会社総合ランキング</h2>
+            <h2 id="ranking-detail-title">
+              <span class="heading-line">ファクタリング会社</span><span class="heading-line">総合ランキング</span>
+            </h2>
             <p class="ranking-detail-lead">個人事業主向けのおすすめサービスを表示しています。</p>
 
             <article class="ranking-card rank-one" id="paytner-detail">
@@ -932,7 +936,7 @@
         </section>
         <section class="column-section" id="columns" aria-labelledby="column-title">
           <div class="column-inner">
-            <h2 id="column-title">ファクタリング基礎コラム</h2>
+            <h2 id="column-title"><span class="heading-line">ファクタリング</span><span class="heading-line">基礎コラム</span></h2>
             <p class="column-lead">初めての方にもわかりやすく、選び方のポイントを解説します。</p>
 
             <div class="column-grid" aria-label="ファクタリング基礎コラム一覧">
@@ -1297,6 +1301,25 @@
           });
         };
 
+        const setHeadingLines = (element, lines) => {
+          if (!element) return;
+          element.replaceChildren();
+          lines.forEach((line) => {
+            const span = document.createElement("span");
+            span.className = "heading-line";
+            span.textContent = line;
+            element.appendChild(span);
+          });
+        };
+
+        const setComparisonTitle = (label = "個人事業主") => {
+          setHeadingLines(comparisonTitle, [`${label}向け`, "ファクタリング会社", "おすすめTOP3"]);
+        };
+
+        const setRankingTitle = () => {
+          setHeadingLines(rankingTitle, ["ファクタリング会社", "総合ランキング"]);
+        };
+
         const comparisonRows = comparisonTable
           ? [...comparisonTable.querySelectorAll("tbody tr")]
           : [];
@@ -1416,11 +1439,9 @@
           }
 
           const label = filterLabels.type[criteria.type] || "条件";
-          rankingTitle.textContent = "ファクタリング会社総合ランキング";
+          setRankingTitle();
           rankingLead.textContent = `${label}向けのおすすめサービスを表示しています。`;
-          if (comparisonTitle) {
-            comparisonTitle.textContent = `${label}向けファクタリング会社おすすめTOP3`;
-          }
+          setComparisonTitle(label);
           if (pickupLabel) {
             pickupLabel.textContent = `${label}向け`;
           }
@@ -1479,10 +1500,10 @@
           comparisonEmpty?.classList.add("is-filter-hidden");
           rankingEmpty?.classList.add("is-filter-hidden");
 
-          if (rankingTitle) rankingTitle.innerHTML = initialRankingTitle;
+          if (rankingTitle) setRankingTitle();
           if (rankingLead) rankingLead.innerHTML = initialRankingLead;
           if (rankingAudienceLabel) rankingAudienceLabel.textContent = initialRankingAudienceLabel;
-          if (comparisonTitle) comparisonTitle.textContent = "個人事業主向けファクタリング会社おすすめTOP3";
+          setComparisonTitle("個人事業主");
           if (pickupLabel) pickupLabel.textContent = "個人事業主向け";
         };
 
@@ -1565,6 +1586,12 @@
           setActiveAudienceTab(getCriteria().type);
           applyFilters();
         });
+
+        const audienceParam = new URLSearchParams(window.location.search).get("audience");
+        if (["corporate", "personal", "freelance"].includes(audienceParam)) {
+          const target = form.querySelector(`input[name="type"][value="${audienceParam}"]`);
+          if (target) target.checked = true;
+        }
 
         syncAll();
         setActiveAudienceTab(getCriteria().type);
