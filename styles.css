@@ -1,6 +1,6 @@
 @layer core, comparison, content, responsive, refinements;
-@import url("css/01-core.css?v=20260525-logo-v24") layer(core);
-@import url("css/02-comparison-ranking.css?v=20260525-logo-v24") layer(comparison);
-@import url("css/03-content-footer.css?v=20260525-logo-v24") layer(content);
-@import url("css/04-responsive.css?v=20260525-logo-v24") layer(responsive);
-@import url("css/05-refinements.css?v=20260525-logo-v24") layer(refinements);
+@import url("css/01-core.css?v=20260525-visual-v26") layer(core);
+@import url("css/02-comparison-ranking.css?v=20260525-visual-v26") layer(comparison);
+@import url("css/03-content-footer.css?v=20260525-visual-v26") layer(content);
+@import url("css/04-responsive.css?v=20260525-visual-v26") layer(responsive);
+@import url("css/05-refinements.css?v=20260525-visual-v26") layer(refinements);
