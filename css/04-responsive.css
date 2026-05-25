@@ -2098,6 +2098,41 @@
     margin-top: 12px;
   }
 
+  .column-page-section {
+    padding: 22px 0 34px;
+  }
+
+  .column-page-inner {
+    width: calc(100% - 28px);
+  }
+
+  .column-back-link {
+    margin-bottom: 14px;
+    font-size: 14px;
+  }
+
+  .column-page-section .column-article {
+    padding: 20px 16px;
+  }
+
+  .column-page-section .column-article h1 {
+    margin-bottom: 12px;
+    font-size: 26px;
+    line-height: 1.35;
+    letter-spacing: 0;
+  }
+
+  .column-page-section .column-article h2 {
+    margin: 22px 0 8px;
+    font-size: 19px;
+    line-height: 1.45;
+  }
+
+  .column-page-section .column-article p:not(.column-article-tag) {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
   .column-more {
     gap: 13px;
     margin-top: 18px;
