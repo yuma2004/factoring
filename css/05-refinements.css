@@ -598,16 +598,14 @@
   }
 }
 
-.comparison-table .company-cell .brand-logo,
-.top3-table thead .brand-logo {
+.comparison-table .company-cell .brand-logo {
   width: min(180px, 100%);
   min-width: 0;
   min-height: 48px;
   font-size: 0;
 }
 
-.comparison-table .company-cell .brand-logo::before,
-.top3-table thead .brand-logo::before {
+.comparison-table .company-cell .brand-logo::before {
   content: "";
   display: block;
   width: 100%;
@@ -618,8 +616,7 @@
   background-size: contain;
 }
 
-.comparison-table .company-cell .brand-logo span,
-.top3-table thead .brand-logo span {
+.comparison-table .company-cell .brand-logo span {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -629,6 +626,43 @@
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
+  border: 0;
+}
+
+.top3-table thead .brand-logo {
+  display: block;
+  width: auto;
+  min-width: 0;
+  min-height: 0;
+  margin: 8px auto 0;
+  color: var(--navy);
+  background: transparent;
+  font-size: clamp(16px, 2vw, 22px);
+  font-weight: 900;
+  line-height: 1.22;
+  text-align: center;
+  text-decoration: none;
+}
+
+.top3-table thead .brand-logo::before {
+  content: none;
+  display: none;
+}
+
+.top3-table thead .brand-logo span {
+  position: static;
+  display: inline;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  clip: auto;
+  clip-path: none;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  white-space: normal;
   border: 0;
 }
 
@@ -643,12 +677,9 @@
   }
 
   .top3-table thead .brand-logo {
-    width: min(128px, 100%);
-    min-height: 36px;
-  }
-
-  .top3-table thead .brand-logo::before {
-    height: 36px;
+    width: auto;
+    min-height: 0;
+    font-size: clamp(13px, 3.4vw, 16px);
   }
 }
 
