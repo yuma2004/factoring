@@ -1,7 +1,6 @@
 @layer core, comparison, content, responsive, refinements;
-@import url("css/01-core.css?v=20260525-top3-text-v31") layer(core);
-@import url("css/02-comparison-ranking.css?v=20260525-top3-text-v31") layer(comparison);
-@import url("css/03-content-footer.css?v=20260525-top3-text-v31") layer(content);
-@import url("css/04-responsive.css?v=20260525-top3-text-v31") layer(responsive);
-@import url("css/05-refinements.css?v=20260525-top3-text-v31") layer(refinements);
-@import url("css/06-top3-text.css?v=20260525-top3-text-v32") layer(refinements);
+@import url("css/01-core.css?v=20260525-css-cleanup-v35") layer(core);
+@import url("css/02-comparison-ranking.css?v=20260525-css-cleanup-v35") layer(comparison);
+@import url("css/03-content-footer.css?v=20260525-css-cleanup-v35") layer(content);
+@import url("css/04-responsive.css?v=20260525-css-cleanup-v35") layer(responsive);
+@import url("css/05-refinements.css?v=20260525-css-cleanup-v35") layer(refinements);

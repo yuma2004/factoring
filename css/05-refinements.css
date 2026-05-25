@@ -16,13 +16,8 @@
   text-decoration: none;
 }
 
-.comparison-table .company-cell .brand-logo {
-  font-size: clamp(15px, 1.5vw, 20px);
-}
-
 .top3-table thead .brand-logo {
   margin-top: 8px;
-  font-size: clamp(17px, 2.2vw, 25px);
 }
 
 .comparison-table .company-cell .brand-logo::before,
@@ -491,7 +486,6 @@
 
   .top3-table thead .brand-logo {
     margin-top: 6px;
-    font-size: 12px;
   }
 
   .top3-thumb {
@@ -664,6 +658,10 @@
   line-height: inherit;
   white-space: normal;
   border: 0;
+}
+
+.pickup-heading h2 .heading-line {
+  display: block;
 }
 
 @media (max-width: 560px) {
