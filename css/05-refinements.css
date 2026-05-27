@@ -1,4 +1,26 @@
 /* Final responsive comparison cleanup */
+.affiliate-link,
+.top3-thumb,
+.service-visual-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.service-visual-link {
+  display: block;
+}
+
+.comparison-table .company-cell > .affiliate-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.top3-table thead .affiliate-link {
+  display: block;
+}
+
 .comparison-table .company-cell .brand-logo,
 .top3-table thead .brand-logo {
   display: inline-flex;
