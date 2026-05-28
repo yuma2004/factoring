@@ -446,6 +446,20 @@
 })();
 
 (() => {
+  const clickId = new URLSearchParams(window.location.search).get("gclid");
+  if (!clickId) return;
+
+  document.querySelectorAll('a[href*="jass-net.com/link.php"]:not(.aff-link)').forEach((link) => {
+    const rawHref = link.getAttribute("href");
+    if (!rawHref) return;
+
+    const url = new URL(rawHref, window.location.href);
+    url.searchParams.set("plid", clickId);
+    link.href = url.toString();
+  });
+})();
+
+(() => {
   if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";
   }
