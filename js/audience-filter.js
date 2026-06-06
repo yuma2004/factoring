@@ -49,6 +49,9 @@
   const rankingAudienceLabel = document.querySelector(".ranking-detail-section .section-label.compact strong");
   const comparisonTitle = document.querySelector("#comparison-title");
   const pickupLabel = document.querySelector(".pickup-label");
+  const firstView = document.querySelector(".first-view-v3");
+  const heroSource = firstView?.querySelector("source[data-personal-srcset]");
+  const heroImage = firstView?.querySelector("img[data-personal-src]");
   const initialRankingTitle = rankingTitle?.innerHTML || "";
   const initialRankingLead = rankingLead?.innerHTML || "";
   const initialRankingAudienceLabel = rankingAudienceLabel?.textContent || "";
@@ -69,7 +72,7 @@
       speed: "same-day"
     },
     "QuQuMo": {
-      types: ["personal", "freelance"],
+      types: ["corporate", "personal", "freelance"],
       amounts: ["small", "mid", "large", "enterprise"],
       speed: "same-day"
     },
@@ -106,7 +109,7 @@
     "ペイトナー": companyProfiles["ペイトナー"],
     "ラボル": companyProfiles["ラボル"],
     "QuQuMo": {
-      types: ["personal", "freelance"],
+      types: ["corporate", "personal", "freelance"],
       amounts: ["small", "mid", "large", "enterprise"],
       speed: "same-day"
     },
@@ -146,6 +149,23 @@
     audiencePanels.forEach((panel) => {
       panel.classList.toggle("is-filter-hidden", panel.dataset.audiencePanel !== value);
     });
+  };
+
+  const updateHeroImage = (value) => {
+    const isCorporate = value === "corporate";
+    firstView?.classList.toggle("is-corporate-view", isCorporate);
+
+    if (heroSource) {
+      heroSource.srcset = isCorporate
+        ? heroSource.dataset.corporateSrcset
+        : heroSource.dataset.personalSrcset;
+    }
+
+    if (heroImage) {
+      heroImage.src = isCorporate
+        ? heroImage.dataset.corporateSrc
+        : heroImage.dataset.personalSrc;
+    }
   };
 
   const setHeadingLines = (element, lines) => {
@@ -209,6 +229,14 @@
       profile.amounts.includes(criteria.amount) &&
       speedRank[profile.speed] <= speedRank[criteria.speed]
     );
+  };
+
+  const isAudienceMatch = (element, criteria) => {
+    const audiences = (element.dataset.audiences || "")
+      .split(/\s+/)
+      .filter(Boolean);
+
+    return audiences.length === 0 || audiences.includes(criteria.type);
   };
 
   const getOrCreateStatus = (className, parent, textClass, tagName = "p") => {
@@ -293,6 +321,7 @@
       pickupLabel.textContent = `${label}向け`;
     }
     updateAudiencePanels(criteria.type);
+    updateHeroImage(criteria.type);
   };
 
   const updateFilterStatus = (criteria, count) => {
@@ -361,7 +390,7 @@
 
     comparisonRows.forEach((row) => {
       const companyName = getCompanyName(row);
-      const matched = isMatch(companyProfiles[companyName], criteria);
+      const matched = isAudienceMatch(row, criteria) && isMatch(companyProfiles[companyName], criteria);
 
       row.classList.toggle("is-filter-hidden", !matched);
       row.classList.toggle("is-filter-match", matched);
@@ -370,7 +399,7 @@
 
     rankingCards.forEach((card) => {
       const companyName = getCompanyName(card);
-      const matched = isMatch(rankingProfiles[companyName], criteria);
+      const matched = isAudienceMatch(card, criteria) && isMatch(rankingProfiles[companyName], criteria);
 
       card.classList.toggle("is-filter-hidden", !matched);
       card.classList.toggle("is-filter-match", matched);

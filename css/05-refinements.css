@@ -710,6 +710,10 @@
   display: none;
 }
 
+.first-view-v3.is-corporate-view .hero-image-frame {
+  aspect-ratio: 960 / 717;
+}
+
 @media (max-width: 900px) {
   .ranking-card .service-visual {
     aspect-ratio: auto;
