@@ -6,6 +6,17 @@
   text-decoration: none;
 }
 
+.site-button.primary.aff-link,
+.top3-site-button.aff-link,
+.detail-site-button.aff-link {
+  color: #fff;
+}
+
+.site-button.primary.aff-link span,
+.detail-site-button.aff-link span {
+  color: inherit;
+}
+
 .service-visual-link {
   display: block;
 }

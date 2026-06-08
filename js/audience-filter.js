@@ -478,7 +478,7 @@
   const clickId = new URLSearchParams(window.location.search).get("gclid");
   if (!clickId) return;
 
-  document.querySelectorAll('a[href*="jass-net.com/link.php"]:not(.aff-link)').forEach((link) => {
+  document.querySelectorAll('a[href*="jass-net.com/link.php"]').forEach((link) => {
     const rawHref = link.getAttribute("href");
     if (!rawHref) return;
 

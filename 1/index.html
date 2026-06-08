@@ -108,10 +108,10 @@
 
         <section class="audience-switch-section" aria-label="利用者タイプ切り替え">
           <div class="audience-switch" role="tablist" aria-label="法人と個人事業主の切り替え">
-            <button class="audience-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="search" data-audience-tab="corporate">
+            <button class="audience-tab" type="button" role="tab" aria-selected="false" aria-controls="search" data-audience-tab="corporate">
               法人
             </button>
-            <button class="audience-tab" type="button" role="tab" aria-selected="false" aria-controls="search" data-audience-tab="personal">
+            <button class="audience-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="search" data-audience-tab="personal">
               個人事業主
             </button>
           </div>
@@ -122,7 +122,7 @@
             <div class="pickup-heading">
               <p class="pickup-copy">＼この3つから選べば間違いなし／</p>
               <h2 id="comparison-title">
-                <span class="heading-line">法人向け</span><span class="heading-line">ファクタリング会社</span><span class="heading-line">おすすめTOP3</span>
+                <span class="heading-line">個人事業主向け</span><span class="heading-line">ファクタリング会社</span><span class="heading-line">おすすめTOP3</span>
               </h2>
             </div>
 
@@ -243,7 +243,7 @@
                     <td class="company-cell">
                       <a class="aff-link" href="https://jass-net.com/link.php?i=pidugwvpjpxd&m=miday5mwdqmf" target="_blank" rel="noopener"><strong class="brand-logo brand-ag"><span>AGビジネスサポート</span></strong></a>
                     </td>
-                    <td class="rating-cell"><span class="stars">★★★★<em>★</em></span><strong>4.4</strong></td>
+                    <td class="rating-cell"><span class="stars">★★★★<em>★</em></span><strong>3.9</strong></td>
                     <td><strong>2〜12%</strong></td>
                     <td><strong class="green-text">最短即日</strong></td>
                     <td>1万円〜</td>
@@ -268,14 +268,14 @@
                     <fieldset class="filter-step">
                       <legend>1. 利用者タイプを選ぶ</legend>
                       <div class="option-grid option-grid-3">
-                        <label class="filter-option is-selected">
-                          <input type="radio" name="type" value="corporate" checked>
-                          <span>法人</span>
-                          <i aria-hidden="true">✓</i>
-                        </label>
                         <label class="filter-option">
-                          <input type="radio" name="type" value="personal">
+                          <input type="radio" name="type" value="corporate">
+                          <span>法人</span>
+                        </label>
+                        <label class="filter-option is-selected">
+                          <input type="radio" name="type" value="personal" checked>
                           <span>個人事業主</span>
+                          <i aria-hidden="true">✓</i>
                         </label>
                         <label class="filter-option">
                           <input type="radio" name="type" value="freelance">
@@ -340,7 +340,7 @@
               </div>
             </section>
 
-            <div class="top3-compare is-filter-hidden" aria-label="おすすめ3社比較" data-audience-panel="personal">
+            <div class="top3-compare" aria-label="おすすめ3社比較" data-audience-panel="personal">
               <div class="top3-compare-head">
                 <p><strong>【個人事業主向け】</strong><span>手数料×入金スピード×審査通過率で選ぶ</span></p>
                 <h3><span class="heading-line">ファクタリング会社</span><span class="heading-line">比較表</span></h3>
@@ -353,17 +353,17 @@
                       <th scope="col"></th>
                       <th scope="col">
                         <span class="medal gold">1</span>
-                        <a class="top3-thumb top3-thumb-paytner" href="https://jass-net.com/link.php?i=pide1y7m6bld&m=miday5mwdqmf" target="_blank" rel="noopener"><img src="/assets/v3-product-paytner.png" alt=""></a>
+                        <a class="top3-thumb top3-thumb-paytner aff-link" href="https://jass-net.com/link.php?i=pide1y7m6bld&m=miday5mwdqmf" target="_blank" rel="noopener"><img src="/assets/v3-product-paytner.png" alt=""></a>
                         <a class="aff-link" href="https://jass-net.com/link.php?i=pide1y7m6bld&m=miday5mwdqmf" target="_blank" rel="noopener"><strong class="brand-logo brand-paytner"><span>ペイトナー</span></strong></a>
                       </th>
                       <th scope="col">
                         <span class="medal silver">2</span>
-                        <a class="top3-thumb top3-thumb-labol" href="https://jass-net.com/link.php?i=pide75vgd7kl&m=miday5mwdqmf" target="_blank" rel="noopener"><img src="/assets/v3-product-labol.png" alt=""></a>
+                        <a class="top3-thumb top3-thumb-labol aff-link" href="https://jass-net.com/link.php?i=pide75vgd7kl&m=miday5mwdqmf" target="_blank" rel="noopener"><img src="/assets/v3-product-labol.png" alt=""></a>
                         <a class="aff-link" href="https://jass-net.com/link.php?i=pide75vgd7kl&m=miday5mwdqmf" target="_blank" rel="noopener"><strong class="brand-logo brand-labol"><span>ラボル</span></strong></a>
                       </th>
                       <th scope="col">
                         <span class="medal bronze">3</span>
-                        <a class="top3-thumb top3-thumb-ququmo" href="https://jass-net.com/link.php?i=piduvzxipach&m=miday5mwdqmf" target="_blank" rel="noopener"><img src="/assets/v3-product-ququmo.png" alt=""></a>
+                        <a class="top3-thumb top3-thumb-ququmo aff-link" href="https://jass-net.com/link.php?i=piduvzxipach&m=miday5mwdqmf" target="_blank" rel="noopener"><img src="/assets/v3-product-ququmo.png" alt=""></a>
                         <a class="aff-link" href="https://jass-net.com/link.php?i=piduvzxipach&m=miday5mwdqmf" target="_blank" rel="noopener"><strong class="brand-logo brand-ququmo"><span>QuQuMo</span></strong></a>
                       </th>
                     </tr>
@@ -425,7 +425,7 @@
               </div>
             </div>
 
-            <div class="top3-compare" aria-label="法人向けおすすめ3社比較" data-audience-panel="corporate">
+            <div class="top3-compare is-filter-hidden" aria-label="法人向けおすすめ3社比較" data-audience-panel="corporate">
               <div class="top3-compare-head">
                 <p><strong>【法人向け】</strong><span>手数料×入金スピード×審査通過率で選ぶ</span></p>
                 <h3><span class="heading-line">ファクタリング会社</span><span class="heading-line">比較表</span></h3>
@@ -438,23 +438,23 @@
                       <th scope="col"></th>
                       <th scope="col">
                         <span class="medal gold">1</span>
-                        <a class="top3-thumb top3-thumb-mentor" href="https://jass-net.com/link.php?i=pi84llxxljtz&m=miday5mwdqmf" target="_blank" rel="noopener"><img src="/assets/corporate-product-mentor.png" alt=""></a>
+                        <a class="top3-thumb top3-thumb-mentor aff-link" href="https://jass-net.com/link.php?i=pi84llxxljtz&m=miday5mwdqmf" target="_blank" rel="noopener"><img src="/assets/corporate-product-mentor.png" alt=""></a>
                         <a class="aff-link" href="https://jass-net.com/link.php?i=pi84llxxljtz&m=miday5mwdqmf" target="_blank" rel="noopener"><strong class="brand-logo brand-mentor"><span>メンターキャピタル</span></strong></a>
                       </th>
                       <th scope="col">
                         <span class="medal silver">2</span>
-                        <a class="top3-thumb top3-thumb-ququmo top3-thumb-ququmo-corporate" href="https://jass-net.com/link.php?i=piduvzxipach&m=miday5mwdqmf" target="_blank" rel="noopener"><img src="/assets/ququmo-comparison.jpg" alt=""></a>
+                        <a class="top3-thumb top3-thumb-ququmo top3-thumb-ququmo-corporate aff-link" href="https://jass-net.com/link.php?i=piduvzxipach&m=miday5mwdqmf" target="_blank" rel="noopener"><img src="/assets/ququmo-comparison.jpg" alt=""></a>
                         <a class="aff-link" href="https://jass-net.com/link.php?i=piduvzxipach&m=miday5mwdqmf" target="_blank" rel="noopener"><strong class="brand-logo brand-ququmo"><span>QuQuMo</span></strong></a>
                       </th>
                       <th scope="col">
                         <span class="medal bronze">3</span>
-                        <a class="top3-thumb top3-thumb-ag" href="https://jass-net.com/link.php?i=pidugwvpjpxd&m=miday5mwdqmf" target="_blank" rel="noopener"><img src="/assets/corporate-product-ag.png" alt=""></a>
+                        <a class="top3-thumb top3-thumb-ag aff-link" href="https://jass-net.com/link.php?i=pidugwvpjpxd&m=miday5mwdqmf" target="_blank" rel="noopener"><img src="/assets/corporate-product-ag.png" alt=""></a>
                         <a class="aff-link" href="https://jass-net.com/link.php?i=pidugwvpjpxd&m=miday5mwdqmf" target="_blank" rel="noopener"><strong class="brand-logo brand-ag"><span>AGビジネスサポート</span></strong></a>
                       </th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr><th scope="row">総合評価</th><td><span class="score-mark best">◎</span><strong>★4.8</strong></td><td><span class="score-mark">○</span><strong>★4.4</strong></td><td><span class="score-mark">○</span><strong>★4.4</strong></td></tr>
+                    <tr><th scope="row">総合評価</th><td><span class="score-mark best">◎</span><strong>★4.8</strong></td><td><span class="score-mark">○</span><strong>★4.4</strong></td><td><span class="score-mark">○</span><strong>★3.9</strong></td></tr>
                     <tr><th scope="row">手数料</th><td><span class="score-mark best">◎</span><strong>2%〜</strong></td><td><span class="score-mark best">◎</span><strong>1%〜14.8%</strong></td><td><span class="score-mark best">◎</span><strong>2〜12%</strong></td></tr>
                     <tr><th scope="row">法人<br>対応力</th><td><span class="score-mark best">◎</span><strong>高い</strong></td><td><span class="score-mark best">◎</span><strong>対応</strong></td><td><span class="score-mark">○</span><strong>対応</strong></td></tr>
                     <tr><th scope="row">入金<br>スピード</th><td><span class="score-mark best">◎</span><strong>最短即日</strong></td><td><span class="score-mark best">◎</span><strong>最短2時間</strong></td><td><span class="score-mark best">◎</span><strong>最短即日</strong></td></tr>
@@ -474,13 +474,13 @@
 
         <section class="ranking-detail-section" id="ranking" aria-labelledby="ranking-detail-title">
           <div class="ranking-detail-inner">
-            <p class="section-label compact"><span></span><strong>法人向け</strong><span></span></p>
+            <p class="section-label compact"><span></span><strong>個人事業主向け</strong><span></span></p>
             <h2 id="ranking-detail-title">
               <span class="heading-line">ファクタリング会社</span><span class="heading-line">総合ランキング</span>
             </h2>
-            <p class="ranking-detail-lead">法人向けのおすすめサービスを表示しています。</p>
+            <p class="ranking-detail-lead">個人事業主向けのおすすめサービスを表示しています。</p>
 
-            <article class="ranking-card rank-one is-filter-hidden" id="paytner-detail">
+            <article class="ranking-card rank-one" id="paytner-detail">
               <div class="rank-ribbon"><span>1</span><small>位</small></div>
               <div class="ranking-left">
                 <h3><a class="aff-link" href="https://jass-net.com/link.php?i=pide1y7m6bld&m=miday5mwdqmf" target="_blank" rel="noopener">ペイトナー</a></h3>
@@ -488,7 +488,7 @@
                 <p class="service-catch">スピードと手軽さで選ぶなら。AI審査で即日入金！</p>
               </div>
               <div class="service-visual pay">
-                <a class="service-visual-link" href="https://jass-net.com/link.php?i=pide1y7m6bld&m=miday5mwdqmf" target="_blank" rel="noopener"><img src="/assets/v3-ranking-paytner.png" alt=""></a>
+                <a class="service-visual-link aff-link" href="https://jass-net.com/link.php?i=pide1y7m6bld&m=miday5mwdqmf" target="_blank" rel="noopener"><img src="/assets/v3-ranking-paytner.png" alt=""></a>
                 <div>
                   <span>フリーランス・個人事業主向け</span>
                   <strong>請求書をその日のうちに先払い</strong>
@@ -566,7 +566,7 @@
               </div>
             </article>
 
-            <article class="ranking-card rank-two is-filter-hidden" id="labol-detail">
+            <article class="ranking-card rank-two" id="labol-detail">
               <div class="rank-ribbon"><span>2</span><small>位</small></div>
               <div class="ranking-left">
                 <h3><a class="aff-link" href="https://jass-net.com/link.php?i=pide75vgd7kl&m=miday5mwdqmf" target="_blank" rel="noopener">ラボル</a></h3>
@@ -574,7 +574,7 @@
                 <p class="service-catch">24時間365日いつでも申込可能！東証プライム上場グループ運営で安心</p>
               </div>
               <div class="service-visual labo">
-                <a class="service-visual-link" href="https://jass-net.com/link.php?i=pide75vgd7kl&m=miday5mwdqmf" target="_blank" rel="noopener"><img src="/assets/v3-ranking-labol.png" alt=""></a>
+                <a class="service-visual-link aff-link" href="https://jass-net.com/link.php?i=pide75vgd7kl&m=miday5mwdqmf" target="_blank" rel="noopener"><img src="/assets/v3-ranking-labol.png" alt=""></a>
                 <div>
                   <span>24時間365日対応</span>
                   <strong>フリーランスの資金繰りをオンラインでサポート</strong>
@@ -653,7 +653,7 @@
               </div>
             </article>
 
-            <article class="ranking-card rank-three is-filter-hidden" id="ququmo-detail" data-audiences="personal freelance">
+            <article class="ranking-card rank-three" id="ququmo-detail" data-audiences="personal freelance">
               <div class="rank-ribbon"><span>3</span><small>位</small></div>
               <div class="ranking-left">
                 <h3><a class="aff-link" href="https://jass-net.com/link.php?i=piduvzxipach&m=miday5mwdqmf" target="_blank" rel="noopener">QuQuMo</a></h3>
@@ -661,7 +661,7 @@
                 <p class="service-catch">上限なしで柔軟に対応！手数料1%〜14.8%の幅広いプラン</p>
               </div>
               <div class="service-visual ququmo">
-                <a class="service-visual-link" href="https://jass-net.com/link.php?i=piduvzxipach&m=miday5mwdqmf" target="_blank" rel="noopener"><img src="/assets/v3-ranking-ququmo.png" alt=""></a>
+                <a class="service-visual-link aff-link" href="https://jass-net.com/link.php?i=piduvzxipach&m=miday5mwdqmf" target="_blank" rel="noopener"><img src="/assets/v3-ranking-ququmo.png" alt=""></a>
                 <div>
                   <span>オンライン完結</span>
                   <strong>必要書類をアップロードしてスピード資金化</strong>
@@ -739,7 +739,7 @@
               </div>
             </article>
 
-            <article class="ranking-card rank-one" id="mentor-detail">
+            <article class="ranking-card rank-one is-filter-hidden" id="mentor-detail">
               <div class="rank-ribbon"><span>1</span><small>位</small></div>
               <div class="ranking-left">
                 <h3><a class="aff-link" href="https://jass-net.com/link.php?i=pi84llxxljtz&m=miday5mwdqmf" target="_blank" rel="noopener">メンターキャピタル</a></h3>
@@ -747,7 +747,7 @@
                 <p class="service-catch">審査通過率92%。赤字・税金滞納などの相談にも柔軟に対応</p>
               </div>
               <div class="service-visual mentor">
-                <a class="service-visual-link" href="https://jass-net.com/link.php?i=pi84llxxljtz&m=miday5mwdqmf" target="_blank" rel="noopener"><img src="/assets/corporate-ranking-mentor.png" alt=""></a>
+                <a class="service-visual-link aff-link" href="https://jass-net.com/link.php?i=pi84llxxljtz&m=miday5mwdqmf" target="_blank" rel="noopener"><img src="/assets/corporate-ranking-mentor.png" alt=""></a>
                 <div>
                   <span>法人向け</span>
                   <strong>売掛金を活用して最短即日で資金調達</strong>
@@ -793,7 +793,7 @@
               </div>
             </article>
 
-            <article class="ranking-card rank-two" id="ququmo-corporate-detail" data-audiences="corporate">
+            <article class="ranking-card rank-two is-filter-hidden" id="ququmo-corporate-detail" data-audiences="corporate">
               <div class="rank-ribbon"><span>2</span><small>位</small></div>
               <div class="ranking-left">
                 <h3><a class="aff-link" href="https://jass-net.com/link.php?i=piduvzxipach&m=miday5mwdqmf" target="_blank" rel="noopener">QuQuMo</a></h3>
@@ -801,7 +801,7 @@
                 <p class="service-catch">オンライン完結でスピードを追求。最短2時間で法人の資金化にも対応</p>
               </div>
               <div class="service-visual ququmo">
-                <a class="service-visual-link" href="https://jass-net.com/link.php?i=piduvzxipach&m=miday5mwdqmf" target="_blank" rel="noopener"><img src="/assets/ququmo-ranking.jpg" alt=""></a>
+                <a class="service-visual-link aff-link" href="https://jass-net.com/link.php?i=piduvzxipach&m=miday5mwdqmf" target="_blank" rel="noopener"><img src="/assets/ququmo-ranking.jpg" alt=""></a>
                 <div>
                   <span>法人向け</span>
                   <strong>請求書をオンラインで送ってスピーディーに現金化</strong>
@@ -847,15 +847,15 @@
               </div>
             </article>
 
-            <article class="ranking-card rank-three" id="ag-detail">
+            <article class="ranking-card rank-three is-filter-hidden" id="ag-detail">
               <div class="rank-ribbon"><span>3</span><small>位</small></div>
               <div class="ranking-left">
                 <h3><a class="aff-link" href="https://jass-net.com/link.php?i=pidugwvpjpxd&m=miday5mwdqmf" target="_blank" rel="noopener">AGビジネスサポート</a></h3>
-                <div class="service-rating"><span>★★★★☆</span><strong>4.4</strong></div>
+                <div class="service-rating"><span>★★★★☆</span><strong>3.9</strong></div>
                 <p class="service-catch">アイフルグループの安心感。手数料2〜12%、最短即日買取に対応</p>
               </div>
               <div class="service-visual ag">
-                <a class="service-visual-link" href="https://jass-net.com/link.php?i=pidugwvpjpxd&m=miday5mwdqmf" target="_blank" rel="noopener"><img src="/assets/corporate-ranking-ag.png" alt=""></a>
+                <a class="service-visual-link aff-link" href="https://jass-net.com/link.php?i=pidugwvpjpxd&m=miday5mwdqmf" target="_blank" rel="noopener"><img src="/assets/corporate-ranking-ag.png" alt=""></a>
                 <div>
                   <span>法人向け</span>
                   <strong>売掛債権を最短即日で資金化</strong>
