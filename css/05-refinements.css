@@ -1,5 +1,5 @@
 /* Final responsive comparison cleanup */
-.affiliate-link,
+.aff-link,
 .top3-thumb,
 .service-visual-link {
   color: inherit;
@@ -10,14 +10,14 @@
   display: block;
 }
 
-.comparison-table .company-cell > .affiliate-link {
+.comparison-table .company-cell > .aff-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
 
-.top3-table thead .affiliate-link {
+.top3-table thead .aff-link {
   display: block;
 }
 
