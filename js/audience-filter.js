@@ -475,7 +475,8 @@
 })();
 
 (() => {
-  const clickId = new URLSearchParams(window.location.search).get("gclid");
+  const params = new URLSearchParams(window.location.search);
+  const clickId = params.get("gclid") || params.get("gbraid") || params.get("wbraid");
   if (!clickId) return;
 
   document.querySelectorAll('a[href*="jass-net.com/link.php"]').forEach((link) => {
