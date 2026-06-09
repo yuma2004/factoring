@@ -72,7 +72,7 @@
       speed: "same-day"
     },
     "QuQuMo": {
-      types: ["corporate", "personal", "freelance"],
+      types: ["corporate"],
       amounts: ["small", "mid", "large", "enterprise"],
       speed: "same-day"
     },
@@ -87,7 +87,7 @@
       speed: "same-day"
     },
     "AGビジネスサポート": {
-      types: ["corporate"],
+      types: ["corporate", "personal", "freelance"],
       amounts: ["small", "mid", "large", "enterprise"],
       speed: "same-day"
     },
@@ -109,7 +109,7 @@
     "ペイトナー": companyProfiles["ペイトナー"],
     "ラボル": companyProfiles["ラボル"],
     "QuQuMo": {
-      types: ["corporate", "personal", "freelance"],
+      types: ["corporate"],
       amounts: ["small", "mid", "large", "enterprise"],
       speed: "same-day"
     },
