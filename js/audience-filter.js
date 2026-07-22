@@ -464,8 +464,15 @@
   });
 
   const audienceParam = new URLSearchParams(window.location.search).get("audience");
-  if (["corporate", "personal", "freelance"].includes(audienceParam)) {
-    const target = form.querySelector(`input[name="type"][value="${audienceParam}"]`);
+  const pathAudience = /(?:^|\/)ho_1\/?$/i.test(window.location.pathname)
+    ? "corporate"
+    : /(?:^|\/)ko_1\/?$/i.test(window.location.pathname)
+      ? "personal"
+      : null;
+  const initialAudience = pathAudience || audienceParam;
+
+  if (["corporate", "personal", "freelance"].includes(initialAudience)) {
+    const target = form.querySelector(`input[name="type"][value="${initialAudience}"]`);
     if (target) target.checked = true;
   }
 
