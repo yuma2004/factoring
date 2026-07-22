@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule ^(?:ho_1|ko_1)/?$ index.html [L]
