@@ -3994,6 +3994,19 @@
 }
 
 @media (max-width: 900px) {
+  .audience-lp .site-header {
+    display: none;
+  }
+
+  .audience-lp .first-view-v3 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .audience-lp .audience-switch-section {
+    padding-top: 0;
+  }
+
   .filter-section.is-mobile-column-filter {
     margin: 12px 0 22px;
     padding: 0;
