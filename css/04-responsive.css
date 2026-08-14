@@ -3994,6 +3994,37 @@
 }
 
 @media (max-width: 900px) {
+  .filter-section.is-mobile-column-filter {
+    margin: 12px 0 22px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+  }
+
+  .filter-section.is-mobile-column-filter .filter-inner {
+    width: 100%;
+  }
+
+  .filter-section.is-mobile-column-filter .filter-instruction {
+    margin: 0 0 8px;
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 900;
+    text-align: center;
+  }
+
+  .filter-section.is-mobile-column-filter .filter-panel {
+    padding: 10px;
+    border: 1px solid #e3e8f0;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 3px 13px rgba(7, 31, 70, .08);
+  }
+
+  .filter-section.is-mobile-column-filter .filter-actions {
+    padding-bottom: 0;
+  }
+
   .comparison-section .filter-section {
     margin: 12px 0 22px;
   }
